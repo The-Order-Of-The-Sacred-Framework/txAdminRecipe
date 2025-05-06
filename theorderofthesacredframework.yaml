@@ -139,16 +139,8 @@ tasks:
     ref: master
     src: https://github.com/MrNewb/MrNewbPawn
 
-  - action: download_github
-    dest: ./resources/[addon]/rhd_garage
-    ref: main
-    src: https://github.com/RHDworks/rhd_garage
-
   - action: waste_time # prevent github throttling
     seconds: 10
-
-
-
 
   - action: download_github
     dest: ./resources/[addon]/r_drugsales
@@ -172,18 +164,33 @@ tasks:
     dest: ./resources/[addon]
     src: ./tmp/xt-prison.zip
 
+  - action: download_file
+    path: ./tmp/ac_scoreboard.zip
+    url: https://github.com/acscripts/ac_scoreboard/releases/latest/download/ac_scoreboard.zip
+  - action: unzip
+    dest: ./resources/[addon]
+    src: ./tmp/ac_scoreboard.zip
+
   - action: download_github
     dest: ./resources/[addon]/mt_policeradar
     ref: main
     src: https://github.com/MT-Scripts/mt_policeradar
 
+  - action: download_github
+    dest: ./resources/[addon]/lc_fuel
+    ref: main
+    src: https://github.com/LeonardoSoares98/lc_fuel
+
+  - action: download_github
+    dest: ./resources/[addon]/um-idcard
+    ref: main
+    src: https://github.com/alp1x/um-idcard
+
   - action: waste_time # prevent github throttling
     seconds: 10
 
 
-
-
-  # OX
+  # OX resources
   - action: download_file
     path: ./tmp/ox_lib.zip
     url: https://github.com/overextended/ox_lib/releases/latest/download/ox_lib.zip
@@ -217,7 +224,10 @@ tasks:
     src: ./resources/[ox]/ox_inventory-2.44.1
     dest: ./resources/[ox]/ox_inventory
 
-
+  - action: move_path
+    src: ./tmp/theorder/items.lua
+    dest: ./resources/[ox]/ox_inventory/data/items.lua
+    overwrite: true
 
 
   - action: waste_time # prevent github throttling
@@ -424,11 +434,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-taxijob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-busjob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-busjob
-
-  - action: download_github
     dest: ./resources/[qb]/qb-newsjob
     ref: main
     src: https://github.com/qbcore-framework/qb-newsjob
@@ -438,7 +443,10 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-jewelery
 
-
+  - action: download_github
+    dest: ./resources/[qb]/qb-garages
+    ref: main
+    src: https://github.com/qbcore-framework/qb-garages
 
 
   - action: waste_time # prevent github throttling
