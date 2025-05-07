@@ -42,6 +42,11 @@ tasks:
   - action: query_database
     file: ./tmp/theorder/qbcore.sql
 
+  # Prepare Database
+  - action: connect_database
+  - action: query_database
+    file: ./theorder/cw_crafting.sql
+
   # STANDALONE
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
@@ -193,11 +198,6 @@ tasks:
     dest: ./resources/[addon]/cw-crafting
     ref: main
     src: https://github.com/Coffeelot/cw-crafting/releases/latest/download/cw-crafting.zip
-
-    # Prepare Database
-  - action: connect_database
-  - action: query_database
-    file: ./resources/[addon]/cw-crafting/cw_crafting.sql
 
   - action: download_file
     path: ./tmp/xt-prison.zip
