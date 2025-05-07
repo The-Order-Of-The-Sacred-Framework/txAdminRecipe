@@ -169,6 +169,19 @@ tasks:
     ref: main
     src: https://github.com/NaorNC/nc-trapphone
 
+
+  - action: download_file
+    path: ./tmp/nc-trapphone.zip
+    url: https://github.com/NaorNC/nc-trapphone/archive/refs/heads/main.zip
+
+  - action: unzip
+    dest: ./resources/[addon]
+    src: ./tmp/nc-trapphone.zip
+
+  - action: move_path
+    src: ./resources/[addon]/nc-trapphone-main
+    dest: ./resources/[addon]/nc-trapphone
+
   - action: move_path
     src: ./resources/[addon]/nc-trapphone/[Inventory-Images]/coke_baggy.png
     dest: ./resources/[ox]/ox_inventory/web/images/coke_baggy.png
