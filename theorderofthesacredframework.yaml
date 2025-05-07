@@ -42,11 +42,6 @@ tasks:
   - action: query_database
     file: ./tmp/theorder/qbcore.sql
 
-  # Prepare Database
-  - action: connect_database
-  - action: query_database
-    file: ./theorder/cw_crafting.sql
-
   # STANDALONE
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
