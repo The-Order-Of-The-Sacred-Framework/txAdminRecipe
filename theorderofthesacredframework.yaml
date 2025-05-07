@@ -175,7 +175,7 @@ tasks:
     overwrite: true
 
   - action: move_path
-    src: ./resources/[addon]/nc-trapphone/[Inventory-Images]/coke_baggy.png
+    src: ./resources/[addon]/nc-trapphone/[Inventory-Images]/meth_baggy.png
     dest: ./resources/[ox]/ox_inventory/web/images/meth_baggy.png
     overwrite: true
 
