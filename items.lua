@@ -186,9 +186,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A muzzle brake for a weapon",
-		client = {
-			image = "heavy_duty_muzzle_brake.png",
-		}
 	},
 
 	["precision_muzzle_brake"] = {
@@ -235,9 +232,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A barrel for a weapon",
-		client = {
-			image = "barrel_attachment.png",
-		}
 	},
 
 	["labkey"] = {
@@ -246,9 +240,6 @@ return {
 		stack = false,
 		close = true,
 		description = "Key for a lock...?",
-		client = {
-			image = "labkey.png",
-		}
 	},
 
 	["aluminumoxide"] = {
@@ -257,9 +248,6 @@ return {
 		stack = true,
 		close = false,
 		description = "Some powder to mix with",
-		client = {
-			image = "aluminumoxide.png",
-		}
 	},
 
 	["goldbar"] = {
@@ -268,9 +256,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Looks pretty expensive to me",
-		client = {
-			image = "goldbar.png",
-		}
 	},
 
 	["veh_plates"] = {
@@ -279,9 +264,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Install vehicle plates",
-		client = {
-			image = "veh_plates.png",
-		}
 	},
 
 	["nitrous"] = {
@@ -290,9 +272,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Speed up, gas pedal! :D",
-		client = {
-			image = "nitrous.png",
-		}
 	},
 
 	["firework4"] = {
@@ -301,9 +280,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Fireworks",
-		client = {
-			image = "firework4.png",
-		}
 	},
 
 	["perseuscamo_attachment"] = {
@@ -312,9 +288,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A perseus camo for a weapon",
-		client = {
-			image = "perseuscamo_attachment.png",
-		}
 	},
 
 	["radioscanner"] = {
@@ -323,9 +296,6 @@ return {
 		stack = true,
 		close = true,
 		description = "With this you can get some police alerts. Not 100% effective however",
-		client = {
-			image = "radioscanner.png",
-		}
 	},
 
 	["sandwich"] = {
@@ -334,9 +304,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Nice bread for your stomach",
-		client = {
-			image = "sandwich.png",
-		}
 	},
 
 	["meth"] = {
@@ -356,9 +323,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Some delicious candy :O",
-		client = {
-			image = "snikkel_candy.png",
-		}
 	},
 
 	["weed_amnesia_seed"] = {
@@ -378,9 +342,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A small scope for a weapon",
-		client = {
-			image = "smallscope_attachment.png",
-		}
 	},
 
 	["dendrogyra_coral"] = {
@@ -389,9 +350,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Its also known as pillar coral",
-		client = {
-			image = "dendrogyra_coral.png",
-		}
 	},
 
 	["fitbit"] = {
@@ -400,9 +358,6 @@ return {
 		stack = false,
 		close = true,
 		description = "I like fitbit",
-		client = {
-			image = "fitbit.png",
-		}
 	},
 
 	["oxy"] = {
@@ -411,9 +366,6 @@ return {
 		stack = true,
 		close = true,
 		description = "The Label Has Been Ripped Off",
-		client = {
-			image = "oxy.png",
-		}
 	},
 
 	["comp_attachment"] = {
@@ -422,9 +374,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A compensator for a weapon",
-		client = {
-			image = "comp_attachment.png",
-		}
 	},
 
 	["beer"] = {
@@ -433,9 +382,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Nothing like a good cold beer!",
-		client = {
-			image = "beer.png",
-		}
 	},
 
 	["weed_ak47_seed"] = {
@@ -466,9 +412,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Sneaky Breaky...",
-		client = {
-			image = "binoculars.png",
-		}
 	},
 
 	["squared_muzzle_brake"] = {
@@ -477,9 +420,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A muzzle brake for a weapon",
-		client = {
-			image = "squared_muzzle_brake.png",
-		}
 	},
 
 	["harness"] = {
@@ -488,9 +428,6 @@ return {
 		stack = false,
 		close = true,
 		description = "Racing Harness so no matter what you stay in the car",
-		client = {
-			image = "harness.png",
-		}
 	},
 
 	["newsmic"] = {
@@ -499,9 +436,6 @@ return {
 		stack = false,
 		close = true,
 		description = "A microphone for the news",
-		client = {
-			image = "newsmic.png",
-		}
 	},
 
 	["suppressor_attachment"] = {
@@ -510,9 +444,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A suppressor for a weapon",
-		client = {
-			image = "suppressor_attachment.png",
-		}
 	},
 
 	["largescope_attachment"] = {
@@ -521,9 +452,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A large scope for a weapon",
-		client = {
-			image = "largescope_attachment.png",
-		}
 	},
 
 	["aluminum"] = {
@@ -532,9 +460,6 @@ return {
 		stack = true,
 		close = false,
 		description = "Nice piece of metal that you can probably use for something",
-		client = {
-			image = "aluminum.png",
-		}
 	},
 
 	["rolex"] = {
@@ -543,9 +468,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A golden watch seems like the jackpot to me!",
-		client = {
-			image = "rolex.png",
-		}
 	},
 
 	["jerry_can"] = {
@@ -554,9 +476,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A can full of Fuel",
-		client = {
-			image = "jerry_can.png",
-		}
 	},
 
 	["advancedlockpick"] = {
@@ -565,9 +484,6 @@ return {
 		stack = true,
 		close = true,
 		description = "If you lose your keys a lot this is very useful... Also useful to open your beers",
-		client = {
-			image = "advancedlockpick.png",
-		}
 	},
 
 	["item_bench"] = {
@@ -587,9 +503,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A geometric camo for a weapon",
-		client = {
-			image = "geocamo_attachment.png",
-		}
 	},
 
 	["steel"] = {
@@ -598,9 +511,6 @@ return {
 		stack = true,
 		close = false,
 		description = "Nice piece of metal that you can probably use for something",
-		client = {
-			image = "steel.png",
-		}
 	},
 
 	["diving_gear"] = {
@@ -609,9 +519,6 @@ return {
 		stack = false,
 		close = true,
 		description = "An oxygen tank and a rebreather",
-		client = {
-			image = "diving_gear.png",
-		}
 	},
 
 	["markedbills"] = {
@@ -620,9 +527,6 @@ return {
 		stack = false,
 		close = true,
 		description = "Money?",
-		client = {
-			image = "markedbills.png",
-		}
 	},
 
 	["holoscope_attachment"] = {
@@ -631,9 +535,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A holo scope for a weapon",
-		client = {
-			image = "holoscope_attachment.png",
-		}
 	},
 
 	["drum_attachment"] = {
@@ -642,9 +543,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A drum for a weapon",
-		client = {
-			image = "drum_attachment.png",
-		}
 	},
 
 	["veh_armor"] = {
@@ -653,9 +551,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Upgrade vehicle armor",
-		client = {
-			image = "veh_armor.png",
-		}
 	},
 
 	["boomcamo_attachment"] = {
@@ -664,9 +559,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A boom camo for a weapon",
-		client = {
-			image = "boomcamo_attachment.png",
-		}
 	},
 
 	["veh_exterior"] = {
@@ -675,9 +567,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Upgrade vehicle exterior",
-		client = {
-			image = "veh_exterior.png",
-		}
 	},
 
 	["veh_engine"] = {
@@ -686,9 +575,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Upgrade vehicle engine",
-		client = {
-			image = "veh_engine.png",
-		}
 	},
 
 	["pinger"] = {
@@ -697,9 +583,6 @@ return {
 		stack = true,
 		close = true,
 		description = "With a pinger and your phone you can send out your location",
-		client = {
-			image = "pinger.png",
-		}
 	},
 
 	["veh_turbo"] = {
@@ -708,9 +591,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Install vehicle turbo",
-		client = {
-			image = "veh_turbo.png",
-		}
 	},
 
 	["handcuffs"] = {
@@ -719,9 +599,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Comes in handy when people misbehave. Maybe it can be used for something else?",
-		client = {
-			image = "handcuffs.png",
-		}
 	},
 
 	["iron"] = {
@@ -730,9 +607,6 @@ return {
 		stack = true,
 		close = false,
 		description = "Handy piece of metal that you can probably use for something",
-		client = {
-			image = "iron.png",
-		}
 	},
 
 	["cleaningkit"] = {
@@ -741,9 +615,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A microfiber cloth with some soap will let your car sparkle again!",
-		client = {
-			image = "cleaningkit.png",
-		}
 	},
 
 	["id_card"] = {
@@ -752,9 +623,6 @@ return {
 		stack = false,
 		close = false,
 		description = "A card containing all your information to identify yourself",
-		client = {
-			image = "id_card.png",
-		}
 	},
 
 	["veh_brakes"] = {
@@ -763,9 +631,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Upgrade vehicle brakes",
-		client = {
-			image = "veh_brakes.png",
-		}
 	},
 
 	["weed_ogkush_seed"] = {
@@ -785,9 +650,6 @@ return {
 		stack = true,
 		close = true,
 		description = "An advanced scope for a weapon",
-		client = {
-			image = "advscope_attachment.png",
-		}
 	},
 
 	["plastic"] = {
@@ -795,10 +657,7 @@ return {
 		weight = 100,
 		stack = true,
 		close = false,
-		description = "RECYCLE! - Greta Thunberg 2019",
-		client = {
-			image = "plastic.png",
-		}
+		description = "The power is yours!",
 	},
 
 	["stickynote"] = {
@@ -807,9 +666,6 @@ return {
 		stack = false,
 		close = false,
 		description = "Sometimes handy to remember something :)",
-		client = {
-			image = "stickynote.png",
-		}
 	},
 
 	["bellend_muzzle_brake"] = {
@@ -818,9 +674,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A muzzle brake for a weapon",
-		client = {
-			image = "bellend_muzzle_brake.png",
-		}
 	},
 
 	["certificate"] = {
@@ -829,9 +682,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Certificate that proves you own certain stuff",
-		client = {
-			image = "certificate.png",
-		}
 	},
 
 	["firstaid"] = {
@@ -840,9 +690,6 @@ return {
 		stack = true,
 		close = true,
 		description = "You can use this First Aid kit to get people back on their feet",
-		client = {
-			image = "firstaid.png",
-		}
 	},
 
 	["cryptostick"] = {
@@ -851,9 +698,6 @@ return {
 		stack = false,
 		close = true,
 		description = "Why would someone ever buy money that doesn't exist.. How many would it contain..?",
-		client = {
-			image = "cryptostick.png",
-		}
 	},
 
 	["weed_ogkush"] = {
@@ -884,9 +728,6 @@ return {
 		stack = true,
 		close = true,
 		description = "ifaks for healing and a complete stress remover.",
-		client = {
-			image = "ifaks.png",
-		}
 	},
 
 	["veh_interior"] = {
@@ -895,9 +736,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Upgrade vehicle interior",
-		client = {
-			image = "veh_interior.png",
-		}
 	},
 
 	["tenkgoldchain"] = {
@@ -939,9 +777,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A diamond ring seems like the jackpot to me!",
-		client = {
-			image = "diamond_ring.png",
-		}
 	},
 
 	["ironoxide"] = {
@@ -950,9 +785,6 @@ return {
 		stack = true,
 		close = false,
 		description = "Some powder to mix with.",
-		client = {
-			image = "ironoxide.png",
-		}
 	},
 
 	["veh_suspension"] = {
@@ -961,9 +793,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Upgrade vehicle suspension",
-		client = {
-			image = "veh_suspension.png",
-		}
 	},
 
 	["laptop"] = {
@@ -972,9 +801,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Expensive laptop",
-		client = {
-			image = "laptop.png",
-		}
 	},
 
 	["electronickit"] = {
@@ -983,9 +809,6 @@ return {
 		stack = true,
 		close = true,
 		description = "If you've always wanted to build a robot you can maybe start here. Maybe you'll be the new Elon Musk?",
-		client = {
-			image = "electronickit.png",
-		}
 	},
 
 	["clip_attachment"] = {
@@ -994,9 +817,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A clip for a weapon",
-		client = {
-			image = "clip_attachment.png",
-		}
 	},
 
 	["coffee"] = {
@@ -1005,9 +825,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Pump 4 Caffeine",
-		client = {
-			image = "coffee.png",
-		}
 	},
 
 	["firework1"] = {
@@ -1016,9 +833,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Fireworks",
-		client = {
-			image = "firework1.png",
-		}
 	},
 
 	["weed_nutrition"] = {
@@ -1027,9 +841,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Plant nutrition",
-		client = {
-			image = "weed_nutrition.png",
-		}
 	},
 
 	["weed_whitewidow"] = {
@@ -1049,9 +860,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Upgrade vehicle wheels",
-		client = {
-			image = "veh_wheels.png",
-		}
 	},
 
 	["weed_brick"] = {
@@ -1060,9 +868,6 @@ return {
 		stack = true,
 		close = true,
 		description = "1KG Weed Brick to sell to large customers.",
-		client = {
-			image = "weed_brick.png",
-		}
 	},
 
 	["weed_ak47"] = {
@@ -1082,9 +887,6 @@ return {
 		stack = false,
 		close = true,
 		description = "A camera for the news",
-		client = {
-			image = "newscam.png",
-		}
 	},
 
 	["moneybag"] = {
@@ -1093,9 +895,6 @@ return {
 		stack = false,
 		close = true,
 		description = "A bag with cash",
-		client = {
-			image = "moneybag.png",
-		}
 	},
 
 	["samsungphone"] = {
@@ -1104,9 +903,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Very expensive phone",
-		client = {
-			image = "samsungphone.png",
-		}
 	},
 
 	["grape"] = {
@@ -1115,9 +911,6 @@ return {
 		stack = true,
 		close = false,
 		description = "Mmmmh yummie, grapes",
-		client = {
-			image = "grape.png",
-		}
 	},
 
 	["medscope_attachment"] = {
@@ -1126,9 +919,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A medium scope for a weapon",
-		client = {
-			image = "medscope_attachment.png",
-		}
 	},
 
 	["tactical_muzzle_brake"] = {
@@ -1137,9 +927,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A muzzle brakee for a weapon",
-		client = {
-			image = "tactical_muzzle_brake.png",
-		}
 	},
 
 	["digicamo_attachment"] = {
@@ -1148,9 +935,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A digital camo for a weapon",
-		client = {
-			image = "digicamo_attachment.png",
-		}
 	},
 
 	["thermite"] = {
@@ -1159,9 +943,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Sometimes you'd wish for everything to burn",
-		client = {
-			image = "thermite.png",
-		}
 	},
 
 	["antipatharia_coral"] = {
@@ -1170,9 +951,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Its also known as black corals or thorn corals",
-		client = {
-			image = "antipatharia_coral.png",
-		}
 	},
 
 	["printerdocument"] = {
@@ -1181,9 +959,6 @@ return {
 		stack = false,
 		close = true,
 		description = "A nice document",
-		client = {
-			image = "printerdocument.png",
-		}
 	},
 
 	["luxuryfinish_attachment"] = {
@@ -1192,9 +967,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A luxury finish for a weapon",
-		client = {
-			image = "luxuryfinish_attachment.png",
-		}
 	},
 
 	["vodka"] = {
@@ -1203,9 +975,6 @@ return {
 		stack = true,
 		close = true,
 		description = "For all the thirsty out there",
-		client = {
-			image = "vodka.png",
-		}
 	},
 
 	["nvscope_attachment"] = {
@@ -1214,9 +983,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A night vision scope for a weapon",
-		client = {
-			image = "nvscope_attachment.png",
-		}
 	},
 
 	["skullcamo_attachment"] = {
@@ -1225,9 +991,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A skull camo for a weapon",
-		client = {
-			image = "skullcamo_attachment.png",
-		}
 	},
 
 	["leopardcamo_attachment"] = {
@@ -1236,9 +999,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A leopard camo for a weapon",
-		client = {
-			image = "leopardcamo_attachment.png",
-		}
 	},
 
 	["iphone"] = {
@@ -1247,9 +1007,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Very expensive phone",
-		client = {
-			image = "iphone.png",
-		}
 	},
 
 	["coke_brick"] = {
@@ -1258,9 +1015,6 @@ return {
 		stack = false,
 		close = true,
 		description = "Heavy package of cocaine, mostly used for deals and takes a lot of space",
-		client = {
-			image = "coke_brick.png",
-		}
 	},
 
 	["armor"] = {
@@ -1269,9 +1023,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Some protection won't hurt... right?",
-		client = {
-			image = "armor.png",
-		}
 	},
 
 	["goldchain"] = {
@@ -1280,9 +1031,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A golden chain seems like the jackpot to me!",
-		client = {
-			image = "goldchain.png",
-		}
 	},
 
 	["fat_end_muzzle_brake"] = {
@@ -1291,9 +1039,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A muzzle brake for a weapon",
-		client = {
-			image = "fat_end_muzzle_brake.png",
-		}
 	},
 
 	["split_end_muzzle_brake"] = {
@@ -1302,9 +1047,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A muzzle brake for a weapon",
-		client = {
-			image = "split_end_muzzle_brake.png",
-		}
 	},
 
 	["veh_transmission"] = {
@@ -1313,9 +1055,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Upgrade vehicle transmission",
-		client = {
-			image = "veh_transmission.png",
-		}
 	},
 
 	["painkillers"] = {
@@ -1324,9 +1063,6 @@ return {
 		stack = true,
 		close = true,
 		description = "For pain you can't stand anymore, take this pill that'd make you feel great again",
-		client = {
-			image = "painkillers.png",
-		}
 	},
 
 	["grapejuice"] = {
@@ -1335,9 +1071,6 @@ return {
 		stack = true,
 		close = false,
 		description = "Grape juice is said to be healthy",
-		client = {
-			image = "grapejuice.png",
-		}
 	},
 
 	["crack_baggy"] = {
@@ -1346,9 +1079,6 @@ return {
 		stack = true,
 		close = true,
 		description = "To get happy faster",
-		client = {
-			image = "crack_baggy.png",
-		}
 	},
 
 	["tosti"] = {
@@ -1357,9 +1087,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Nice to eat",
-		client = {
-			image = "tosti.png",
-		}
 	},
 
 	["flashlight_attachment"] = {
@@ -1368,9 +1095,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A flashlight for a weapon",
-		client = {
-			image = "flashlight_attachment.png",
-		}
 	},
 
 	["flat_muzzle_brake"] = {
@@ -1379,9 +1103,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A muzzle brake for a weapon",
-		client = {
-			image = "flat_muzzle_brake.png",
-		}
 	},
 
 	["screwdriverset"] = {
@@ -1390,9 +1111,6 @@ return {
 		stack = true,
 		close = false,
 		description = "Very useful to screw... screws...",
-		client = {
-			image = "screwdriverset.png",
-		}
 	},
 
 	["veh_xenons"] = {
@@ -1401,9 +1119,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Upgrade vehicle xenons",
-		client = {
-			image = "veh_xenons.png",
-		}
 	},
 
 	["walkstick"] = {
@@ -1412,9 +1127,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Walking stick for ya'll grannies out there.. HAHA",
-		client = {
-			image = "walkstick.png",
-		}
 	},
 
 	["police_stormram"] = {
@@ -1423,9 +1135,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A nice tool to break into doors",
-		client = {
-			image = "police_stormram.png",
-		}
 	},
 
 	["firework3"] = {
@@ -1434,9 +1143,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Fireworks",
-		client = {
-			image = "firework3.png",
-		}
 	},
 
 	["copper"] = {
@@ -1445,9 +1151,6 @@ return {
 		stack = true,
 		close = false,
 		description = "Nice piece of metal that you can probably use for something",
-		client = {
-			image = "copper.png",
-		}
 	},
 
 	["veh_toolbox"] = {
@@ -1456,9 +1159,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Check vehicle status",
-		client = {
-			image = "veh_toolbox.png",
-		}
 	},
 
 	["patriotcamo_attachment"] = {
@@ -1467,9 +1167,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A patriot camo for a weapon",
-		client = {
-			image = "patriotcamo_attachment.png",
-		}
 	},
 
 	["metalscrap"] = {
@@ -1478,9 +1175,6 @@ return {
 		stack = true,
 		close = false,
 		description = "You can probably make something nice out of this",
-		client = {
-			image = "metalscrap.png",
-		}
 	},
 
 	["diamond"] = {
@@ -1489,9 +1183,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A diamond seems like the jackpot to me!",
-		client = {
-			image = "diamond.png",
-		}
 	},
 
 	["tablet"] = {
@@ -1500,9 +1191,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Expensive tablet",
-		client = {
-			image = "tablet.png",
-		}
 	},
 
 	["weed_purplehaze_seed"] = {
@@ -1533,9 +1221,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Paper made specifically for encasing and smoking tobacco or cannabis.",
-		client = {
-			image = "rolling_paper.png",
-		}
 	},
 
 	["lighter"] = {
@@ -1544,9 +1229,6 @@ return {
 		stack = true,
 		close = true,
 		description = "On new years eve a nice fire to stand next to",
-		client = {
-			image = "lighter.png",
-		}
 	},
 
 	["zebracamo_attachment"] = {
@@ -1555,9 +1237,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A zebra camo for a weapon",
-		client = {
-			image = "zebracamo_attachment.png",
-		}
 	},
 
 	["rubber"] = {
@@ -1566,9 +1245,6 @@ return {
 		stack = true,
 		close = false,
 		description = "Rubber, I believe you can make your own rubber ducky with it :D",
-		client = {
-			image = "rubber.png",
-		}
 	},
 
 	["drill"] = {
@@ -1577,9 +1253,6 @@ return {
 		stack = true,
 		close = false,
 		description = "The real deal...",
-		client = {
-			image = "drill.png",
-		}
 	},
 
 	["grip_attachment"] = {
@@ -1588,9 +1261,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A grip for a weapon",
-		client = {
-			image = "grip_attachment.png",
-		}
 	},
 
 	["firework2"] = {
@@ -1599,9 +1269,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Fireworks",
-		client = {
-			image = "firework2.png",
-		}
 	},
 
 	["veh_tint"] = {
@@ -1610,9 +1277,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Install vehicle tint",
-		client = {
-			image = "veh_tint.png",
-		}
 	},
 
 	["brushcamo_attachment"] = {
@@ -1621,9 +1285,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A brushstroke camo for a weapon",
-		client = {
-			image = "brushcamo_attachment.png",
-		}
 	},
 
 	["slanted_muzzle_brake"] = {
@@ -1632,9 +1293,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A muzzle brake for a weapon",
-		client = {
-			image = "slanted_muzzle_brake.png",
-		}
 	},
 
 	["weed_skunk"] = {
@@ -1654,9 +1312,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Some delicious candy :O",
-		client = {
-			image = "twerks_candy.png",
-		}
 	},
 
 	["veh_neons"] = {
@@ -1665,9 +1320,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Upgrade vehicle neons",
-		client = {
-			image = "veh_neons.png",
-		}
 	},
 
 	["joint"] = {
@@ -1676,9 +1328,6 @@ return {
 		stack = true,
 		close = true,
 		description = "Sidney would be very proud at you",
-		client = {
-			image = "joint.png",
-		}
 	},
 
 	["weed_whitewidow_seed"] = {
@@ -1698,9 +1347,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A security card... I wonder what it goes to",
-		client = {
-			image = "security_card_01.png",
-		}
 	},
 
 	["sessantacamo_attachment"] = {
@@ -1709,9 +1355,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A sessanta nove camo for a weapon",
-		client = {
-			image = "sessantacamo_attachment.png",
-		}
 	},
 
 	["whiskey"] = {
@@ -1720,9 +1363,6 @@ return {
 		stack = true,
 		close = true,
 		description = "For all the thirsty out there",
-		client = {
-			image = "whiskey.png",
-		}
 	},
 
 	["tirerepairkit"] = {
@@ -1731,9 +1371,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A kit to repair your tires",
-		client = {
-			image = "tirerepairkit.png",
-		}
 	},
 
 	["thermalscope_attachment"] = {
@@ -1742,9 +1379,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A thermal scope for a weapon",
-		client = {
-			image = "thermalscope_attachment.png",
-		}
 	},
 
 	["coke_small_brick"] = {
@@ -1775,9 +1409,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A nice toolbox with stuff to repair your vehicle",
-		client = {
-			image = "repairkit.png",
-		}
 	},
 
 	["newsbmic"] = {
@@ -1786,9 +1417,6 @@ return {
 		stack = false,
 		close = true,
 		description = "A Useable BoomMic",
-		client = {
-			image = "newsbmic.png",
-		}
 	},
 
 	["filled_evidence_bag"] = {
@@ -1830,9 +1458,6 @@ return {
 		stack = true,
 		close = false,
 		description = "Some good wine to drink on a fine evening",
-		client = {
-			image = "wine.png",
-		}
 	},
 
 	["weed_purplehaze"] = {
@@ -1852,9 +1477,6 @@ return {
 		stack = false,
 		close = false,
 		description = "Permit to show you can drive a vehicle",
-		client = {
-			image = "driver_license.png",
-		}
 	},
 
 	["water_bottle"] = {
@@ -1863,9 +1485,6 @@ return {
 		stack = true,
 		close = true,
 		description = "For all the thirsty out there",
-		client = {
-			image = "water_bottle.png",
-		}
 	},
 
 	["security_card_02"] = {
@@ -1874,9 +1493,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A security card... I wonder what it goes to",
-		client = {
-			image = "security_card_02.png",
-		}
 	},
 
 	["lawyerpass"] = {
@@ -1885,9 +1501,6 @@ return {
 		stack = false,
 		close = false,
 		description = "Pass exclusive to lawyers to show they can represent a suspect",
-		client = {
-			image = "lawyerpass.png",
-		}
 	},
 
 	["casinochips"] = {
@@ -1896,9 +1509,6 @@ return {
 		stack = true,
 		close = false,
 		description = "Chips For Casino Gambling",
-		client = {
-			image = "casinochips.png",
-		}
 	},
 
 	["weaponlicense"] = {
@@ -1918,9 +1528,6 @@ return {
 		stack = true,
 		close = true,
 		description = "A woodland camo for a weapon",
-		client = {
-			image = "woodcamo_attachment.png",
-		}
 	},
 
 	["bank_card"] = {
@@ -1929,9 +1536,6 @@ return {
 		stack = false,
 		close = true,
 		description = "Used to access ATM",
-		client = {
-			image = "bank_card.png",
-		}
 	},
 
 	["attachment_bench"] = {
@@ -1966,7 +1570,16 @@ return {
 			image = "tunerchip.png",
 		}
 	},
-	--MrNewbWeaponTints
+	-- Start of MrNewbCustomPlates
+	["customizableplate"] = {
+		label = "Custom Plate",
+		weight = 2000,
+		stack = false,
+		close = true,
+		description = "This will change the plate on a car you own!",
+	},
+	-- End of MrNewbCustomPlates
+	-- Start of MrNewbWeaponTints
 	['newbserialfile'] = {
 		label = 'Heavy File',
 		stack = false,
@@ -2033,7 +1646,7 @@ return {
 			tint = 5
 		}
 	},
-	['orangetint'] = { 
+	['orangetint'] = {
 		label = 'Orange Weapon Tint',
 		stack = false,
 		close = true,
@@ -2055,11 +1668,13 @@ return {
 			tint = 7
 		}
 	},
-	--r_drugsale
-	['r_trapphone'] = {
+	-- End of MrNewbWeaponTints
+	-- Start of nc-trapphone
+	['trapphone'] = {
 		label = 'Trap Phone',
 		weight = 35,
 		stack = false,
 		close = true,
 	},
+	-- End of nc-trapphone
 }
