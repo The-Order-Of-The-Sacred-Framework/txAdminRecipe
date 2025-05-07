@@ -286,9 +286,6 @@ tasks:
   - action: unzip
     dest: ./resources/[voice]
     src: ./tmp/mm_radio.zip
-  - action: move_path
-    src: ./resources/[voice]/mm_radio/mm_radio
-    dest: ./resources/[voice]/mm_radio
 
     # Assets
   - action: download_github
