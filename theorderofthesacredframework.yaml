@@ -22,6 +22,18 @@ tasks:
     dest: ./ox.cfg
 
   - action: move_path
+    src: ./tmp/theorder/voice.cfg
+    dest: ./voice.cfg
+
+  - action: move_path
+    src: ./tmp/theorder/aceperms.cfg
+    dest: ./aceperms.cfg
+
+  - action: move_path
+    src: ./tmp/theorder/settings.cfg
+    dest: ./settings.cfg
+
+  - action: move_path
     src: ./tmp/theorder/myLogo.png
     dest: ./myLogo.png
 
@@ -104,8 +116,6 @@ tasks:
     seconds: 10
 
 
-
-
     # Libs
   - action: download_github
     dest: ./resources/[libs]/community_bridge
@@ -125,9 +135,6 @@ tasks:
   - action: waste_time # prevent github throttling
     seconds: 10
 
-
-
-
     # addons
   - action: download_github
     dest: ./resources/[addon]/MrNewbWeaponTints
@@ -139,13 +146,43 @@ tasks:
     ref: master
     src: https://github.com/MrNewb/MrNewbPawn
 
+  - action: download_github
+    dest: ./resources/[addon]/MrNewbCustomPlates
+    ref: master
+    src: https://github.com/MrNewb/MrNewbCustomPlates
+
+  - action: move_path
+    src: ./resources/[addon]/MrNewbCustomPlates/[INSTALL]/itemimages/customizableplate.png
+    dest: ./resources/[ox]/ox_inventory/web/images/customizableplate.png
+    overwrite: true
+
   - action: waste_time # prevent github throttling
     seconds: 10
 
   - action: download_github
-    dest: ./resources/[addon]/r_drugsales
+    dest: ./resources/[addon]/nc-pickpocket
     ref: main
-    src: https://github.com/rumaier/r_drugsales
+    src: https://github.com/NaorNC/nc-pickpocket
+
+  - action: download_github
+    dest: ./resources/[addon]/nc-trapphone
+    ref: main
+    src: https://github.com/NaorNC/nc-trapphone
+
+  - action: move_path
+    src: ./resources/[addon]/nc-trapphone/[Inventory-Images]/coke_baggy.png
+    dest: ./resources/[ox]/ox_inventory/web/images/coke_baggy.png
+    overwrite: true
+
+  - action: move_path
+    src: ./resources/[addon]/nc-trapphone/[Inventory-Images]/coke_baggy.png
+    dest: ./resources/[ox]/ox_inventory/web/images/meth_baggy.png
+    overwrite: true
+
+  - action: move_path
+    src: ./resources/[addon]/nc-trapphone/[Inventory-Images]/weed_baggy.png
+    dest: ./resources/[ox]/ox_inventory/web/images/weed_baggy.png
+    overwrite: true
 
   - action: download_github
     dest: ./resources/[addon]/r_communityservice
@@ -156,6 +193,12 @@ tasks:
     dest: ./resources/[addon]/cw-crafting
     ref: main
     src: https://github.com/Coffeelot/cw-crafting/releases/latest/download/cw-crafting.zip
+
+    # Prepare Database
+  - action: connect_database
+  - action: query_database
+    file: ./resources/[addon]/cw-crafting/cw_crafting.sql
+    cw_crafting.sql
 
   - action: download_file
     path: ./tmp/xt-prison.zip
@@ -248,8 +291,11 @@ tasks:
     path: ./tmp/mm_radio.zip
     url: https://github.com/SOH69/mm_radio/releases/latest/download/mm_radio.zip
   - action: unzip
-    dest: ./resources/[voice]/mm_radio
+    dest: ./resources/[voice]
     src: ./tmp/mm_radio.zip
+  - action: move_path
+    src: ./resources/[voice]/mm_radio/mm_radio
+    dest: ./resources/[voice]/mm_radio
 
     # Assets
   - action: download_github
@@ -267,9 +313,6 @@ tasks:
     ref: main
     src: https://github.com/Lorenc95/pillbox
 
-
-
-
   - action: waste_time # prevent github throttling
     seconds: 10
 
@@ -280,14 +323,14 @@ tasks:
     src: https://github.com/qbcore-framework/qb-core
 
   - action: download_github
-    dest: ./resources/[qb]/qb-scoreboard
-    ref: main
-    src: https://github.com/qbcore-framework/qb-scoreboard
-
-  - action: download_github
     dest: ./resources/[qb]/qb-multicharacter
     ref: main
     src: https://github.com/qbcore-framework/qb-multicharacter
+
+  - action: move_path
+    src: ./tmp/theorder/edits/qb-multicharacter/main.lua
+    dest: ./resources/[qb]/qb-multicharacter/server/main.lua
+    overwrite: true
 
   - action: download_github
     dest: ./resources/[qb]/qb-vehiclesales
@@ -303,8 +346,6 @@ tasks:
     dest: ./resources/[qb]/qb-houserobbery
     ref: main
     src: https://github.com/qbcore-framework/qb-houserobbery
-
-
 
 
   - action: waste_time # prevent github throttling
@@ -329,8 +370,6 @@ tasks:
     dest: ./resources/[qb]/qb-ambulancejob
     ref: main
     src: https://github.com/qbcore-framework/qb-ambulancejob
-
-
 
 
   - action: waste_time # prevent github throttling
@@ -423,6 +462,11 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-cityhall
 
+  - action: move_path
+    src: ./tmp/theorder/edits/qb-cityhall/main.lua
+    dest: ./resources/[qb]/qb-cityhall/server/main.lua
+    overwrite: true
+
   - action: download_github
     dest: ./resources/[qb]/qb-truckrobbery
     ref: main
@@ -432,11 +476,6 @@ tasks:
     dest: ./resources/[qb]/qb-minigames
     ref: main
     src: https://github.com/qbcore-framework/qb-minigames
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-taxijob
-    ref: main
-    src: https://github.com/qbcore-framework/qb-taxijob
 
   - action: download_github
     dest: ./resources/[qb]/qb-newsjob
