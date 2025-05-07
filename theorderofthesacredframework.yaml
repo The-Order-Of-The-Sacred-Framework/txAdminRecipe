@@ -135,6 +135,54 @@ tasks:
   - action: waste_time # prevent github throttling
     seconds: 10
 
+  # OX resources
+  - action: download_file
+    path: ./tmp/ox_lib.zip
+    url: https://github.com/overextended/ox_lib/releases/latest/download/ox_lib.zip
+  - action: unzip
+    dest: ./resources/[ox]
+    src: ./tmp/ox_lib.zip
+
+  - action: download_file
+    path: ./tmp/ox_target.zip
+    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_target/archive/refs/tags/1.17.2.zip
+
+  - action: unzip
+    dest: ./resources/[ox]
+    src: ./tmp/ox_target.zip
+
+  - action: move_path
+    src: ./resources/[ox]/ox_target-1.17.2
+    dest: ./resources/[ox]/ox_target
+
+  - action: download_file
+    path: ./tmp/oxmysql.zip
+    url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
+  - action: unzip
+    dest: ./resources/[ox]
+    src: ./tmp/oxmysql.zip
+
+  - action: download_file
+    path: ./tmp/ox_inventory.zip
+    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_inventory/archive/refs/tags/2.44.1.zip
+
+  - action: unzip
+    dest: ./resources/[ox]
+    src: ./tmp/ox_inventory.zip
+
+  - action: move_path
+    src: ./resources/[ox]/ox_inventory-2.44.1
+    dest: ./resources/[ox]/ox_inventory
+
+  - action: move_path
+    src: ./tmp/theorder/items.lua
+    dest: ./resources/[ox]/ox_inventory/data/items.lua
+    overwrite: true
+
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
     # addons
   - action: download_github
     dest: ./resources/[addon]/MrNewbWeaponTints
@@ -222,55 +270,6 @@ tasks:
     dest: ./resources/[addon]/um-idcard
     ref: main
     src: https://github.com/alp1x/um-idcard
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
-
-  # OX resources
-  - action: download_file
-    path: ./tmp/ox_lib.zip
-    url: https://github.com/overextended/ox_lib/releases/latest/download/ox_lib.zip
-  - action: unzip
-    dest: ./resources/[ox]
-    src: ./tmp/ox_lib.zip
-
-  - action: download_file
-    path: ./tmp/ox_target.zip
-    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_target/archive/refs/tags/1.17.2.zip
-
-  - action: unzip
-    dest: ./resources/[ox]
-    src: ./tmp/ox_target.zip
-
-  - action: move_path
-    src: ./resources/[ox]/ox_target-1.17.2
-    dest: ./resources/[ox]/ox_target
-
-  - action: download_file
-    path: ./tmp/oxmysql.zip
-    url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
-  - action: unzip
-    dest: ./resources/[ox]
-    src: ./tmp/oxmysql.zip
-
-  - action: download_file
-    path: ./tmp/ox_inventory.zip
-    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_inventory/archive/refs/tags/2.44.1.zip
-
-  - action: unzip
-    dest: ./resources/[ox]
-    src: ./tmp/ox_inventory.zip
-
-  - action: move_path
-    src: ./resources/[ox]/ox_inventory-2.44.1
-    dest: ./resources/[ox]/ox_inventory
-
-  - action: move_path
-    src: ./tmp/theorder/items.lua
-    dest: ./resources/[ox]/ox_inventory/data/items.lua
-    overwrite: true
-
 
   - action: waste_time # prevent github throttling
     seconds: 10
