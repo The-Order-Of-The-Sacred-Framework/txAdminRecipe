@@ -212,6 +212,16 @@ tasks:
     ref: main
     src: https://github.com/NaorNC/nc-pickpocket
 
+  - action: move_path
+    src: ./tmp/theorder/edits/nc-pickpocket/config.lua
+    dest: ./resources/[addon]/nc-pickpocket/config.lua
+    overwrite: true
+
+  - action: move_path
+    src: ./tmp/theorder/edits/nc-pickpocket/fxmanifest.lua
+    dest: ./resources/[addon]/nc-pickpocket/fxmanifest.lua
+    overwrite: true
+
   - action: download_github
     dest: ./resources/[addon]/nc-trapphone
     ref: main
@@ -230,6 +240,16 @@ tasks:
   - action: move_path
     src: ./resources/[addon]/nc-trapphone/[Inventory-Images]/weed_baggy.png
     dest: ./resources/[ox]/ox_inventory/web/images/weed_baggy.png
+    overwrite: true
+
+  - action: move_path
+    src: ./tmp/theorder/edits/nc-trapphone/config.lua
+    dest: ./resources/[addon]/nc-trapphone/config.lua
+    overwrite: true
+
+  - action: move_path
+    src: ./tmp/theorder/edits/nc-trapphone/fxmanifest.lua
+    dest: ./resources/[addon]/nc-trapphone/fxmanifest.lua
     overwrite: true
 
   - action: download_github
