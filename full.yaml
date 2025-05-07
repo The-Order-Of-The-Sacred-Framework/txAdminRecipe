@@ -30,6 +30,10 @@ tasks:
     dest: ./aceperms.cfg
 
   - action: move_path
+    src: ./tmp/theorder/misc.cfg
+    dest: ./misc.cfg
+
+  - action: move_path
     src: ./tmp/theorder/settings.cfg
     dest: ./settings.cfg
 
@@ -121,6 +125,11 @@ tasks:
     dest: ./resources/[libs]/community_bridge
     ref: main
     src: https://github.com/The-Order-Of-The-Sacred-Framework/community_bridge/
+
+  - action: download_github
+    dest: ./resources/[libs]/bl_bridge
+    ref: main
+    src: https://github.com/Byte-Labs-Studio/bl_bridge/
 
   - action: download_github
     dest: ./resources/[libs]/lc_utils
