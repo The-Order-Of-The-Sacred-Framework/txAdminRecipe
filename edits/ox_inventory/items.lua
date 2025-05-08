@@ -3686,4 +3686,42 @@ return {
         }
 	},
 	-- End of mana hunting
+	-- Start of wasabi_fishing
+	['tuna'] = {
+		label = 'Tuna',
+		weight = 650,
+		stack = true,
+		close = false,
+	},
+	['salmon'] = {
+		label = 'Salmon',
+		weight = 350,
+		stack = true,
+		close = false,
+	},
+	['trout'] = {
+		label = 'Trout',
+		weight = 250,
+		stack = true,
+		close = false,
+	},
+	['anchovy'] = {
+		label = 'Anchovy',
+		weight = 50,
+		stack = true,
+		close = false,
+	},
+	['fishbait'] = {
+		label = 'Fish Bait',
+		weight = 50,
+		stack = true,
+		close = false,
+	},
+	['fishingrod'] = {
+		label = 'Fishing Rod',
+		weight = 800,
+		stack = true,
+		close = true,
+	},
+	-- End of wasabi_fishing
 }

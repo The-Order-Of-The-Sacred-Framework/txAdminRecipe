@@ -55,6 +55,8 @@ tasks:
   - action: query_database
     file: ./tmp/theorder/sqlfiles/psmdt.sql
 
+  - action: query_database
+    file: ./tmp/theorder/sqlfiles/illenium.sql
 
   # STANDALONE
   - action: download_github
@@ -331,6 +333,16 @@ tasks:
     src: https://github.com/IamLation/lation_247robbery
 
   - action: download_github
+    dest: ./resources/[addon]/wasabi_fishing
+    ref: main
+    src: https://github.com/wasabirobby/wasabi_fishing/tree/main
+
+  - action: copy_path
+    src: ./resources/[addon]/wasabi_fishing/Inventory_Items/InventoryImage
+    dest: ./resources/[ox]/ox_inventory/web/images
+    overwrite: true
+
+  - action: download_github
     dest: ./resources/[addon]/md-houserobberies
     ref: main
     src: https://github.com/Mustachedom/md-houserobberies
@@ -365,6 +377,11 @@ tasks:
 
   - action: waste_time # prevent github throttling
     seconds: 10
+
+  - action: download_github
+    dest: ./resources/[addon]/rpemotes-reborn
+    ref: master
+    src: https://github.com/alberttheprince/rpemotes-reborn
 
     # VOICE
   - action: download_github
@@ -410,8 +427,13 @@ tasks:
     src: https://github.com/qbcore-framework/qb-multicharacter
 
   - action: move_path
-    src: ./tmp/theorder/edits/qb-multicharacter/main.lua
+    src: ./tmp/theorder/edits/qb-multicharacter/server/main.lua
     dest: ./resources/[qb]/qb-multicharacter/server/main.lua
+    overwrite: true
+
+  - action: move_path
+    src: ./tmp/theorder/edits/qb-multicharacter/client/main.lua
+    dest: ./resources/[qb]/qb-multicharacter/client/main.lua
     overwrite: true
 
   - action: download_github
@@ -585,10 +607,13 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-bankrobbery
 
-  - action: download_github
-    dest: ./resources/[qb]/qb-clothing
-    ref: main
-    src: https://github.com/qbcore-framework/qb-clothing
+  - action: download_file
+    path: ./tmp/illenium-appearance.zip
+    url: https://github.com/iLLeniumStudios/illenium-appearance/releases/download/v5.7.0/illenium-appearance.zip
+
+  - action: unzip
+    dest: ./resources/[qb]
+    src: ./tmp/illenium-appearance.zip
 
   - action: download_github
     dest: ./resources/[qb]/qb-hotdogjob
