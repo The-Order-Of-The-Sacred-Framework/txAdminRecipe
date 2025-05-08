@@ -623,6 +623,9 @@ return {
 		stack = false,
 		close = false,
 		description = "A card containing all your information to identify yourself",
+		client = {
+			image = 'card_id.png'
+		}
 	},
 
 	["veh_brakes"] = {
@@ -1477,6 +1480,9 @@ return {
 		stack = false,
 		close = false,
 		description = "Permit to show you can drive a vehicle",
+		client = {
+			image = 'card_id.png'
+		}
 	},
 
 	["water_bottle"] = {
