@@ -252,7 +252,7 @@ tasks:
     src: https://github.com/qbcore-framework/qb-multicharacter
 
   - action: move_path
-    src: ./tmp/theorder/edits/qb-multicharacter/main.lua
+    src: ./tmp/theorder/edits/qb-multicharacter/server/main.lua
     dest: ./resources/[qb]/qb-multicharacter/server/main.lua
     overwrite: true
 

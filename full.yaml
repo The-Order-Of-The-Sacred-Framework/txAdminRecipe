@@ -338,7 +338,7 @@ tasks:
     src: https://github.com/wasabirobby/wasabi_fishing/tree/main
 
   - action: copy_path
-    src: ./resources/[addon]/wasabi_fishing/Inventory_Items/InventoryImage
+    src: ./resources/[addon]/wasabi_fishing/Inventory_Items/InventoryImages
     dest: ./resources/[ox]/ox_inventory/web/images
     overwrite: true
 
@@ -470,6 +470,11 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-houses
 
+  - action: move_path
+    src: ./tmp/theorder/edits/qb-houses/fxmanifest.lua
+    dest: ./resources/[qb]/qb-houses/fxmanifest.lua
+    overwrite: true
+
   - action: download_github
     dest: ./resources/[qb]/qb-ambulancejob
     ref: main
@@ -507,6 +512,11 @@ tasks:
   - action: move_path
     src: ./tmp/theorder/edits/qb-apartments/server/main.lua
     dest: ./resources/[qb]/qb-apartments/server/main.lua
+    overwrite: true
+
+  - action: move_path
+    src: ./tmp/theorder/edits/qb-apartments/fxmanifest.lua
+    dest: ./resources/[qb]/qb-apartments/fxmanifest.lua
     overwrite: true
 
   - action: download_github
