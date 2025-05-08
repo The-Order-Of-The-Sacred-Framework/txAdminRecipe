@@ -227,8 +227,6 @@ CREATE TABLE IF NOT EXISTS `players` (
   KEY `license` (`license`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
-ALTER TABLE `players` ADD `crafting_blueprints` LONGTEXT NOT NULL DEFAULT '[]';
-
 CREATE TABLE IF NOT EXISTS `playerskins` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `citizenid` VARCHAR(11) NOT NULL,
@@ -295,3 +293,5 @@ CREATE TABLE IF NOT EXISTS `inventories` (
   PRIMARY KEY (`identifier`),
   KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `players` ADD `crafting_blueprints` LONGTEXT NOT NULL DEFAULT '[]';
