@@ -46,6 +46,18 @@ tasks:
   - action: query_database
     file: ./tmp/theorder/sqlfiles/qbcore.sql
 
+  - action: connect_database
+  - action: query_database
+    file: ./tmp/theorder/sqlfiles/psbanking.sql
+
+  - action: connect_database
+  - action: query_database
+    file: ./tmp/theorder/sqlfiles/psmdt.sql
+
+  - action: connect_database
+  - action: query_database
+    file: ./tmp/theorder/sqlfiles/mddrugs.sql
+
   # STANDALONE
   - action: download_github
     src: https://github.com/citizenfx/cfx-server-data
@@ -199,11 +211,12 @@ tasks:
 
   - action: unzip
     dest: ./resources/[ox]
-    src: ./tmp/ox_doorlock-1.19.3.zip
+    src: ./tmp/ox_doorlock.zip
 
   - action: move_path
     src: ./resources/[ox]/ox_doorlock-1.19.3
     dest: ./resources/[ox]/ox_doorlock
+    overwrite: true
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -314,10 +327,6 @@ tasks:
     ref: main
     src: https://github.com/alp1x/um-idcard
 
-  - action: connect_database
-  - action: query_database
-    file: ./tmp/theorder/sqlfiles/psmdt.sql
-
   - action: download_github
     dest: ./resources/[addon]/ps-mdt
     ref: main
@@ -335,12 +344,20 @@ tasks:
     dest: ./resources/[addon]
     src: ./tmp/ps-adminmenu.zip
 
+  - action: move_path
+    src: ./resources/[addon]/ps-adminmenu-1.1.6
+    dest: ./resources/[addon]/ps-adminmenu
+
   - action: download_file
     path: ./tmp/ps-banking.zip
     url: https://github.com/Project-Sloth/ps-banking/archive/refs/tags/1.0.4.zip
   - action: unzip
     dest: ./resources/[addon]
     src: ./tmp/ps-banking.zip
+
+  - action: move_path
+    src: ./resources/[addon]/ps-banking-1.0.4
+    dest: ./resources/[addon]/ps-banking
 
   - action: download_github
     dest: ./resources/[addon]/sleepless_inventory_addons
@@ -361,11 +378,6 @@ tasks:
     src: ./resources/[addon]/md-houserobberies/install/images
     dest: ./resources/[ox]/ox_inventory/web/images
     overwrite: true
-
-  # Prepare Database
-  - action: connect_database
-  - action: query_database
-    file: ./tmp/theorder/sqlfiles/mddrugs.sql
 
   - action: download_github
     dest: ./resources/[addon]/md-drugs
@@ -388,12 +400,6 @@ tasks:
     overwrite: true
     exclude:
       - gimp
-
-
-  # Prepare Database
-  - action: connect_database
-  - action: query_database
-    file: ./tmp/theorder/sqlfiles/psbanking.sql
 
   - action: waste_time # prevent github throttling
     seconds: 10
