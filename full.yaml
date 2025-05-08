@@ -44,7 +44,7 @@ tasks:
   # Prepare Database
   - action: connect_database
   - action: query_database
-    file: ./tmp/theorder/qbcore.sql
+    file: ./tmp/theorder/sqlfiles/qbcore.sql
 
   # STANDALONE
   - action: download_github
@@ -73,6 +73,11 @@ tasks:
     dest: ./resources/[standalone]/xsound
     ref: master
     src: https://github.com/Xogy/xsound
+
+  - action: download_github
+    dest: ./resources/[standalone]/ps-ui
+    ref: main
+    src: https://github.com/Project-Sloth/ps-ui
 
   - action: download_github
     dest: ./resources/[standalone]/connectqueue
@@ -184,10 +189,21 @@ tasks:
     dest: ./resources/[ox]/ox_inventory
 
   - action: move_path
-    src: ./tmp/theorder/items.lua
+    src: ./tmp/theorder/edits/ox_inventory/items.lua
     dest: ./resources/[ox]/ox_inventory/data/items.lua
     overwrite: true
 
+  - action: download_file
+    path: ./tmp/ox_doorlock.zip
+    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_doorlock/archive/refs/tags/1.19.3.zip
+
+  - action: unzip
+    dest: ./resources/[ox]
+    src: ./tmp/ox_doorlock-1.19.3.zip
+
+  - action: move_path
+    src: ./resources/[ox]/ox_doorlock-1.19.3
+    dest: ./resources/[ox]/ox_doorlock
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -236,19 +252,10 @@ tasks:
     ref: main
     src: https://github.com/NaorNC/nc-trapphone
 
-  - action: move_path
-    src: ./resources/[addon]/nc-trapphone/[Inventory-Images]/coke_baggy.png
-    dest: ./resources/[ox]/ox_inventory/web/images/coke_baggy.png
-    overwrite: true
 
   - action: move_path
-    src: ./resources/[addon]/nc-trapphone/[Inventory-Images]/meth_baggy.png
-    dest: ./resources/[ox]/ox_inventory/web/images/meth_baggy.png
-    overwrite: true
-
-  - action: move_path
-    src: ./resources/[addon]/nc-trapphone/[Inventory-Images]/weed_baggy.png
-    dest: ./resources/[ox]/ox_inventory/web/images/weed_baggy.png
+    src: ./resources/[addon]/nc-trapphone/[Inventory-Images]
+    dest: ./resources/[ox]/ox_inventory/web/images/
     overwrite: true
 
   - action: move_path
@@ -279,6 +286,13 @@ tasks:
     src: ./tmp/xt-prison.zip
 
   - action: download_file
+    path: ./tmp/bl_customs.zip
+    url: https://github.com/Byte-Labs-Studio/bl_customs/releases/latest/download/bl_customs.zip
+  - action: unzip
+    dest: ./resources/[addon]
+    src: ./tmp/bl_customs.zip
+
+  - action: download_file
     path: ./tmp/ac_scoreboard.zip
     url: https://github.com/acscripts/ac_scoreboard/releases/latest/download/ac_scoreboard.zip
   - action: unzip
@@ -299,6 +313,87 @@ tasks:
     dest: ./resources/[addon]/um-idcard
     ref: main
     src: https://github.com/alp1x/um-idcard
+
+  - action: connect_database
+  - action: query_database
+    file: ./tmp/theorder/sqlfiles/psmdt.sql
+
+  - action: download_github
+    dest: ./resources/[addon]/ps-mdt
+    ref: main
+    src: https://github.com/Project-Sloth/ps-mdt
+
+  - action: download_github
+    dest: ./resources/[addon]/ps-dispatch
+    ref: main
+    src: https://github.com/Project-Sloth/ps-dispatch
+
+  - action: download_file
+    path: ./tmp/ps-adminmenu.zip
+    url: https://github.com/Project-Sloth/ps-adminmenu/archive/refs/tags/1.1.6.zip
+  - action: unzip
+    dest: ./resources/[addon]
+    src: ./tmp/ps-adminmenu.zip
+
+  - action: download_file
+    path: ./tmp/ps-banking.zip
+    url: https://github.com/Project-Sloth/ps-banking/archive/refs/tags/1.0.4.zip
+  - action: unzip
+    dest: ./resources/[addon]
+    src: ./tmp/ps-banking.zip
+
+  - action: download_github
+    dest: ./resources/[addon]/sleepless_inventory_addons
+    ref: main
+    src: https://github.com/Sleepless-Development/sleepless_inventory_addons
+
+  - action: download_github
+    dest: ./resources/[addon]/lation_247robbery
+    ref: main
+    src: https://github.com/IamLation/lation_247robbery
+
+  - action: download_github
+    dest: ./resources/[addon]/md-houserobberies
+    ref: main
+    src: https://github.com/Mustachedom/md-houserobberies
+
+  - action: move_path
+    src: ./resources/[addon]/md-houserobberies/install/images
+    dest: ./resources/[ox]/ox_inventory/web/images
+    overwrite: true
+
+  # Prepare Database
+  - action: connect_database
+  - action: query_database
+    file: ./tmp/theorder/sqlfiles/mddrugs.sql
+
+  - action: download_github
+    dest: ./resources/[addon]/md-drugs
+    ref: main
+    src: https://github.com/Mustachedom/md-drugs
+
+  - action: move_path
+    src: ./resources/[addon]/md-drugs/items_install/images
+    dest: ./resources/[ox]/ox_inventory/web/images
+    overwrite: true
+
+  - action: download_github
+    dest: ./resources/[addon]/mana_hunting
+    ref: master
+    src: https://github.com/Manason/mana_hunting/tree/master
+
+  - action: move_path
+    src: ./resources/[addon]/mana_hunting/img
+    dest: ./resources/[ox]/ox_inventory/web/images
+    overwrite: true
+    exclude:
+      - gimp
+
+
+  # Prepare Database
+  - action: connect_database
+  - action: query_database
+    file: ./tmp/theorder/sqlfiles/psbanking.sql
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -414,6 +509,16 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-apartments
 
+  - action: move_path
+    src: ./tmp/theorder/edits/qb-apartments/client/main.lua
+    dest: ./resources/[qb]/qb-apartments/client/main.lua
+    overwrite: true
+
+  - action: move_path
+    src: ./tmp/theorder/edits/qb-apartments/server/main.lua
+    dest: ./resources/[qb]/qb-apartments/server/main.lua
+    overwrite: true
+
   - action: download_github
     dest: ./resources/[qb]/qb-vehiclekeys
     ref: main
@@ -446,11 +551,6 @@ tasks:
     src: https://github.com/qbcore-framework/qb-towjob
 
   - action: download_github
-    dest: ./resources/[qb]/qb-storerobbery
-    ref: main
-    src: https://github.com/qbcore-framework/qb-storerobbery
-
-  - action: download_github
     dest: ./resources/[qb]/qb-spawn
     ref: main
     src: https://github.com/qbcore-framework/qb-spawn
@@ -464,9 +564,6 @@ tasks:
     dest: ./resources/[qb]/qb-recyclejob
     ref: main
     src: https://github.com/qbcore-framework/qb-recyclejob
-
-
-
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -519,11 +616,6 @@ tasks:
     dest: ./resources/[qb]/qb-bankrobbery
     ref: main
     src: https://github.com/qbcore-framework/qb-bankrobbery
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-banking
-    ref: main
-    src: https://github.com/qbcore-framework/qb-banking
 
   - action: download_github
     dest: ./resources/[qb]/qb-clothing
