@@ -25,8 +25,8 @@ files {
     'html/index.html',
     'html/styles.css',
     'html/script.js',
-    'html/imgs/*.jpg',
-    'html/imgs/*.png'
+    --'html/imgs/*.jpg',
+    --'html/imgs/*.png'
 }
 
 lua54 'yes'

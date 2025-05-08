@@ -234,7 +234,7 @@ tasks:
     ref: master
     src: https://github.com/MrNewb/MrNewbCustomPlates
 
-  - action: move_path
+  - action: copy_path
     src: ./resources/[addon]/MrNewbCustomPlates/[INSTALL]/itemimages/customizableplate.png
     dest: ./resources/[ox]/ox_inventory/web/images/customizableplate.png
     overwrite: true
@@ -263,7 +263,7 @@ tasks:
     src: https://github.com/NaorNC/nc-trapphone
 
 
-  - action: move_path
+  - action: copy_path
     src: ./resources/[addon]/nc-trapphone/[Inventory-Images]
     dest: ./resources/[ox]/ox_inventory/web/images/
     overwrite: true
@@ -371,7 +371,7 @@ tasks:
     ref: main
     src: https://github.com/Mustachedom/md-houserobberies
 
-  - action: move_path
+  - action: copy_path
     src: ./resources/[addon]/md-houserobberies/install/images
     dest: ./resources/[ox]/ox_inventory/web/images
     overwrite: true
@@ -381,7 +381,7 @@ tasks:
     ref: main
     src: https://github.com/Mustachedom/md-drugs
 
-  - action: move_path
+  - action: copy_path
     src: ./resources/[addon]/md-drugs/items_install/images
     dest: ./resources/[ox]/ox_inventory/web/images
     overwrite: true
@@ -390,13 +390,14 @@ tasks:
     dest: ./resources/[addon]/mana_hunting
     ref: master
     src: https://github.com/Manason/mana_hunting/tree/master
-
-  - action: move_path
+  
+  - action: copy_path
     src: ./resources/[addon]/mana_hunting/img
     dest: ./resources/[ox]/ox_inventory/web/images
     overwrite: true
-    exclude:
-      - gimp
+
+  - action: remove_path
+    path: ./resources/[ox]/ox_inventory/web/images/gimp
 
   - action: waste_time # prevent github throttling
     seconds: 10
