@@ -243,42 +243,6 @@ tasks:
     seconds: 10
 
   - action: download_github
-    dest: ./resources/[addon]/nc-pickpocket
-    ref: main
-    src: https://github.com/NaorNC/nc-pickpocket
-
-  - action: move_path
-    src: ./tmp/theorder/edits/nc-pickpocket/config.lua
-    dest: ./resources/[addon]/nc-pickpocket/config.lua
-    overwrite: true
-
-  - action: move_path
-    src: ./tmp/theorder/edits/nc-pickpocket/fxmanifest.lua
-    dest: ./resources/[addon]/nc-pickpocket/fxmanifest.lua
-    overwrite: true
-
-  - action: download_github
-    dest: ./resources/[addon]/nc-trapphone
-    ref: main
-    src: https://github.com/NaorNC/nc-trapphone
-
-
-  - action: copy_path
-    src: ./resources/[addon]/nc-trapphone/[Inventory-Images]
-    dest: ./resources/[ox]/ox_inventory/web/images/
-    overwrite: true
-
-  - action: move_path
-    src: ./tmp/theorder/edits/nc-trapphone/config.lua
-    dest: ./resources/[addon]/nc-trapphone/config.lua
-    overwrite: true
-
-  - action: move_path
-    src: ./tmp/theorder/edits/nc-trapphone/fxmanifest.lua
-    dest: ./resources/[addon]/nc-trapphone/fxmanifest.lua
-    overwrite: true
-
-  - action: download_github
     dest: ./resources/[addon]/r_communityservice
     ref: main
     src: https://github.com/rumaier/r_communityservice
