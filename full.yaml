@@ -46,17 +46,15 @@ tasks:
   - action: query_database
     file: ./tmp/theorder/sqlfiles/qbcore.sql
 
-  - action: connect_database
   - action: query_database
     file: ./tmp/theorder/sqlfiles/psbanking.sql
 
-  - action: connect_database
+  - action: query_database
+    file: ./tmp/theorder/sqlfiles/mddrugs.sql
+
   - action: query_database
     file: ./tmp/theorder/sqlfiles/psmdt.sql
 
-  - action: connect_database
-  - action: query_database
-    file: ./tmp/theorder/sqlfiles/mddrugs.sql
 
   # STANDALONE
   - action: download_github
@@ -135,7 +133,6 @@ tasks:
 
   - action: waste_time # prevent github throttling
     seconds: 10
-
 
     # Libs
   - action: download_github
