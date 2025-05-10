@@ -157,9 +157,6 @@ tasks:
     ref: main
     src: https://github.com/rumaier/r_bridge/
 
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
   # OX resources
   - action: download_file
     path: ./tmp/ox_lib.zip
@@ -204,6 +201,16 @@ tasks:
     dest: ./resources/[ox]/ox_inventory/data/items.lua
     overwrite: true
 
+  - action: move_path
+    src: ./tmp/theorder/edits/ox_inventory/stashes.lua
+    dest: ./resources/[ox]/ox_inventory/data/stashes.lua
+    overwrite: true
+
+  - action: move_path
+    src: ./tmp/theorder/edits/ox_inventory/evidence.lua
+    dest: ./resources/[ox]/ox_inventory/data/evidence.lua
+    overwrite: true
+
   - action: download_file
     path: ./tmp/ox_doorlock.zip
     url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_doorlock/archive/refs/tags/1.19.3.zip
@@ -219,6 +226,20 @@ tasks:
 
   - action: waste_time # prevent github throttling
     seconds: 10
+
+    # images
+  - action: download_file
+    path: ./tmp/RecipeImages.zip
+    url: https://github.com/The-Order-Of-The-Sacred-Framework/RecipeImages/archive/refs/heads/main.zip
+
+  - action: unzip
+    dest: ./tmp/RecipeImages
+    src: ./tmp/RecipeImages.zip
+
+  - action: copy_path
+    src: ./tmp/RecipeImages/RecipeImages-main/images
+    dest: ./resources/[ox]/ox_inventory/web/images
+    overwrite: true
 
     # addons
   - action: download_github
@@ -412,9 +433,6 @@ tasks:
     ref: main
     src: https://github.com/Lorenc95/pillbox
 
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
   # Downloading QBCore resources
   - action: download_github
     dest: ./resources/[qb]/qb-core
@@ -480,10 +498,6 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-ambulancejob
 
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
   - action: download_github
     dest: ./resources/[qb]/qb-radialmenu
     ref: main
@@ -498,6 +512,21 @@ tasks:
     dest: ./resources/[qb]/qb-policejob
     ref: main
     src: https://github.com/qbcore-framework/qb-policejob
+
+  - action: move_path
+    src: ./tmp/theorder/edits/qb-policejob/client/job.lua
+    dest: ./resources/[qb]/qb-policejob/client/job.lua
+    overwrite: true
+
+  - action: move_path
+    src: ./tmp/theorder/edits/qb-policejob/server/evidence.lua
+    dest: ./resources/[qb]/qb-policejob/server/evidence.lua
+    overwrite: true
+
+  - action: move_path
+    src: ./tmp/theorder/edits/qb-policejob/server/main.lua
+    dest: ./resources/[qb]/qb-policejob/server/main.lua
+    overwrite: true
 
   - action: download_github
     dest: ./resources/[qb]/qb-apartments
@@ -533,9 +562,6 @@ tasks:
     dest: ./resources/[qb]/qb-phone
     ref: main
     src: https://github.com/qbcore-framework/qb-phone
-
-
-
 
   - action: waste_time # prevent github throttling
     seconds: 10
