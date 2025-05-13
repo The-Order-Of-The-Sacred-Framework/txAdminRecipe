@@ -165,14 +165,14 @@ tasks:
 
   - action: download_file
     path: ./tmp/ox_inventory.zip
-    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_inventory/archive/refs/tags/2.44.1.zip
+    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_inventory/archive/refs/tags/2.44.2.zip
 
   - action: unzip
     dest: ./resources/[ox]
     src: ./tmp/ox_inventory.zip
 
   - action: move_path
-    src: ./resources/[ox]/ox_inventory-2.44.1
+    src: ./resources/[ox]/ox_inventory-2.44.2
     dest: ./resources/[ox]/ox_inventory
 
   - action: move_path
@@ -217,16 +217,10 @@ tasks:
     src: ./resources/[addon]/ps-adminmenu-1.1.6
     dest: ./resources/[addon]/ps-adminmenu
 
-  - action: download_file
-    path: ./tmp/ps-banking.zip
-    url: https://github.com/Project-Sloth/ps-banking/archive/refs/tags/1.0.4.zip
-  - action: unzip
-    dest: ./resources/[addon]
-    src: ./tmp/ps-banking.zip
-
-  - action: move_path
-    src: ./resources/[addon]/ps-banking-1.0.4
+  - action: download_github
     dest: ./resources/[addon]/ps-banking
+    ref: main
+    src: https://github.com/The-Orders-Storage/ps-banking
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -249,12 +243,7 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-multicharacter
     ref: main
-    src: https://github.com/qbcore-framework/qb-multicharacter
-
-  - action: move_path
-    src: ./tmp/theorder/edits/qb-multicharacter/server/main.lua
-    dest: ./resources/[qb]/qb-multicharacter/server/main.lua
-    overwrite: true
+    src: https://github.com/The-Orders-Storage/qb-multicharacter
 
   - action: download_github
     dest: ./resources/[qb]/qb-vehiclesales
@@ -288,7 +277,7 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-houses
     ref: main
-    src: https://github.com/qbcore-framework/qb-houses
+    src: https://github.com/The-Orders-Storage/qb-houses
 
   - action: download_github
     dest: ./resources/[qb]/qb-ambulancejob
@@ -312,22 +301,12 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-policejob
     ref: main
-    src: https://github.com/qbcore-framework/qb-policejob
+    src: https://github.com/The-Orders-Storage/qb-policejob
 
   - action: download_github
     dest: ./resources/[qb]/qb-apartments
     ref: main
-    src: https://github.com/qbcore-framework/qb-apartments
-
-  - action: move_path
-    src: ./tmp/theorder/edits/qb-apartments/client/main.lua
-    dest: ./resources/[qb]/qb-apartments/client/main.lua
-    overwrite: true
-
-  - action: move_path
-    src: ./tmp/theorder/edits/qb-apartments/server/main.lua
-    dest: ./resources/[qb]/qb-apartments/server/main.lua
-    overwrite: true
+    src: https://github.com/The-Orders-Storage/qb-apartments
 
   - action: download_github
     dest: ./resources/[qb]/qb-vehiclekeys
@@ -343,9 +322,6 @@ tasks:
     dest: ./resources/[qb]/qb-phone
     ref: main
     src: https://github.com/qbcore-framework/qb-phone
-
-
-
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -386,12 +362,7 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-cityhall
     ref: main
-    src: https://github.com/qbcore-framework/qb-cityhall
-
-  - action: move_path
-    src: ./tmp/theorder/edits/qb-cityhall/main.lua
-    dest: ./resources/[qb]/qb-cityhall/server/main.lua
-    overwrite: true
+    src: https://github.com/The-Orders-Storage/qb-cityhall
 
   - action: download_github
     dest: ./resources/[qb]/qb-truckrobbery
