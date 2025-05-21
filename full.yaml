@@ -186,15 +186,11 @@ tasks:
 
   - action: download_file
     path: ./tmp/ox_inventory.zip
-    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_inventory/archive/refs/tags/2.44.2.zip
+    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_inventory/releases/latest/download/ox_inventory.zip
 
   - action: unzip
     dest: ./resources/[ox]
     src: ./tmp/ox_inventory.zip
-
-  - action: move_path
-    src: ./resources/[ox]/ox_inventory-2.44.2
-    dest: ./resources/[ox]/ox_inventory
 
   - action: move_path
     src: ./tmp/theorder/edits/ox_inventory/items.lua
