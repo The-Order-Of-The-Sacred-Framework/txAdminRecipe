@@ -6,7 +6,6 @@ author: The contributors of these great resources.
 description: An Lite reipe for qb-core using ox inventory as well as more community resources.
 
 tasks:
-
   #  Download Base Files
   - action: download_github
     src: https://github.com/The-Order-Of-The-Sacred-Framework/txAdminRecipe
@@ -139,7 +138,7 @@ tasks:
   # OX resources
   - action: download_file
     path: ./tmp/ox_lib.zip
-    url: https://github.com/overextended/ox_lib/releases/latest/download/ox_lib.zip
+    url: https://github.com/CommunityOx/ox_lib/releases/download/v3.30.9/ox_lib.zip
   - action: unzip
     dest: ./resources/[ox]
     src: ./tmp/ox_lib.zip
@@ -158,7 +157,7 @@ tasks:
 
   - action: download_file
     path: ./tmp/oxmysql.zip
-    url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
+    url: https://github.com/CommunityOx/oxmysql/releases/download/v2.12.3/oxmysql.zip
   - action: unzip
     dest: ./resources/[ox]
     src: ./tmp/oxmysql.zip
@@ -266,7 +265,6 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-houserobbery
 
-
   - action: waste_time # prevent github throttling
     seconds: 10
 
@@ -289,7 +287,6 @@ tasks:
     dest: ./resources/[qb]/qb-ambulancejob
     ref: main
     src: https://github.com/qbcore-framework/qb-ambulancejob
-
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -394,7 +391,6 @@ tasks:
     dest: ./resources/[qb]/qb-garages
     ref: main
     src: https://github.com/qbcore-framework/qb-garages
-
 
   - action: waste_time # prevent github throttling
     seconds: 10
