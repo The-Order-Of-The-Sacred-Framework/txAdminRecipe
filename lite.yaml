@@ -1,12 +1,11 @@
 $engine: 3
 $onesync: on
-name: The Orders Recipe
+name: The Orders Lite Recipe
 version: 0.0.1
 author: The contributors of these great resources.
-description: An adjusted reipe for qb-core using ox inventory as well as more community resources.
+description: An Lite reipe for qb-core using ox inventory as well as more community resources.
 
 tasks:
-
   #  Download Base Files
   - action: download_github
     src: https://github.com/The-Order-Of-The-Sacred-Framework/txAdminRecipe
@@ -30,6 +29,10 @@ tasks:
     dest: ./aceperms.cfg
 
   - action: move_path
+    src: ./tmp/theorder/misc.cfg
+    dest: ./misc.cfg
+
+  - action: move_path
     src: ./tmp/theorder/settings.cfg
     dest: ./settings.cfg
 
@@ -40,7 +43,10 @@ tasks:
   # Prepare Database
   - action: connect_database
   - action: query_database
-    file: ./tmp/theorder/qbcore.sql
+    file: ./tmp/theorder/sqlfiles/qbcore.sql
+
+  - action: query_database
+    file: ./tmp/theorder/sqlfiles/psbanking.sql
 
   # STANDALONE
   - action: download_github
@@ -115,7 +121,6 @@ tasks:
   - action: waste_time # prevent github throttling
     seconds: 10
 
-
     # Libs
   - action: download_github
     dest: ./resources/[libs]/community_bridge
@@ -127,115 +132,13 @@ tasks:
     ref: main
     src: https://github.com/LeonardoSoares98/lc_utils/
 
-  - action: download_github
-    dest: ./resources/[libs]/r_bridge
-    ref: main
-    src: https://github.com/rumaier/r_bridge/
-
   - action: waste_time # prevent github throttling
     seconds: 10
-
-    # addons
-  - action: download_github
-    dest: ./resources/[addon]/MrNewbWeaponTints
-    ref: master
-    src: https://github.com/MrNewb/MrNewbWeaponTints/
-
-  - action: download_github
-    dest: ./resources/[addon]/MrNewbPawn
-    ref: master
-    src: https://github.com/MrNewb/MrNewbPawn
-
-  - action: download_github
-    dest: ./resources/[addon]/MrNewbCustomPlates
-    ref: master
-    src: https://github.com/MrNewb/MrNewbCustomPlates
-
-  - action: move_path
-    src: ./resources/[addon]/MrNewbCustomPlates/[INSTALL]/itemimages/customizableplate.png
-    dest: ./resources/[ox]/ox_inventory/web/images/customizableplate.png
-    overwrite: true
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
-  - action: download_github
-    dest: ./resources/[addon]/nc-pickpocket
-    ref: main
-    src: https://github.com/NaorNC/nc-pickpocket
-
-  - action: download_github
-    dest: ./resources/[addon]/nc-trapphone
-    ref: main
-    src: https://github.com/NaorNC/nc-trapphone
-
-  - action: move_path
-    src: ./resources/[addon]/nc-trapphone/[Inventory-Images]/coke_baggy.png
-    dest: ./resources/[ox]/ox_inventory/web/images/coke_baggy.png
-    overwrite: true
-
-  - action: move_path
-    src: ./resources/[addon]/nc-trapphone/[Inventory-Images]/coke_baggy.png
-    dest: ./resources/[ox]/ox_inventory/web/images/meth_baggy.png
-    overwrite: true
-
-  - action: move_path
-    src: ./resources/[addon]/nc-trapphone/[Inventory-Images]/weed_baggy.png
-    dest: ./resources/[ox]/ox_inventory/web/images/weed_baggy.png
-    overwrite: true
-
-  - action: download_github
-    dest: ./resources/[addon]/r_communityservice
-    ref: main
-    src: https://github.com/rumaier/r_communityservice
-
-  - action: download_github
-    dest: ./resources/[addon]/cw-crafting
-    ref: main
-    src: https://github.com/Coffeelot/cw-crafting/releases/latest/download/cw-crafting.zip
-
-    # Prepare Database
-  - action: connect_database
-  - action: query_database
-    file: ./resources/[addon]/cw-crafting/cw_crafting.sql
-
-  - action: download_file
-    path: ./tmp/xt-prison.zip
-    url: https://github.com/xT-Development/xt-prison/releases/latest/download/xt-prison.zip
-  - action: unzip
-    dest: ./resources/[addon]
-    src: ./tmp/xt-prison.zip
-
-  - action: download_file
-    path: ./tmp/ac_scoreboard.zip
-    url: https://github.com/acscripts/ac_scoreboard/releases/latest/download/ac_scoreboard.zip
-  - action: unzip
-    dest: ./resources/[addon]
-    src: ./tmp/ac_scoreboard.zip
-
-  - action: download_github
-    dest: ./resources/[addon]/mt_policeradar
-    ref: main
-    src: https://github.com/MT-Scripts/mt_policeradar
-
-  - action: download_github
-    dest: ./resources/[addon]/lc_fuel
-    ref: main
-    src: https://github.com/LeonardoSoares98/lc_fuel
-
-  - action: download_github
-    dest: ./resources/[addon]/um-idcard
-    ref: main
-    src: https://github.com/alp1x/um-idcard
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
 
   # OX resources
   - action: download_file
     path: ./tmp/ox_lib.zip
-    url: https://github.com/overextended/ox_lib/releases/latest/download/ox_lib.zip
+    url: https://github.com/CommunityOx/ox_lib/releases/download/v3.30.9/ox_lib.zip
   - action: unzip
     dest: ./resources/[ox]
     src: ./tmp/ox_lib.zip
@@ -254,28 +157,75 @@ tasks:
 
   - action: download_file
     path: ./tmp/oxmysql.zip
-    url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
+    url: https://github.com/CommunityOx/oxmysql/releases/download/v2.12.3/oxmysql.zip
   - action: unzip
     dest: ./resources/[ox]
     src: ./tmp/oxmysql.zip
 
   - action: download_file
     path: ./tmp/ox_inventory.zip
-    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_inventory/archive/refs/tags/2.44.1.zip
+    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_inventory/releases/latest/download/ox_inventory.zip
 
   - action: unzip
     dest: ./resources/[ox]
     src: ./tmp/ox_inventory.zip
 
   - action: move_path
-    src: ./resources/[ox]/ox_inventory-2.44.1
-    dest: ./resources/[ox]/ox_inventory
-
-  - action: move_path
-    src: ./tmp/theorder/items.lua
+    src: ./tmp/theorder/edits/ox_inventory/items.lua
     dest: ./resources/[ox]/ox_inventory/data/items.lua
     overwrite: true
 
+  - action: move_path
+    src: ./tmp/theorder/edits/ox_inventory/stashes.lua
+    dest: ./resources/[ox]/ox_inventory/data/stashes.lua
+    overwrite: true
+
+  - action: move_path
+    src: ./tmp/theorder/edits/ox_inventory/evidence.lua
+    dest: ./resources/[ox]/ox_inventory/data/evidence.lua
+    overwrite: true
+
+  - action: download_file
+    path: ./tmp/ox_doorlock.zip
+    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_doorlock/archive/refs/tags/1.19.3.zip
+
+  - action: unzip
+    dest: ./resources/[ox]
+    src: ./tmp/ox_doorlock.zip
+
+  - action: move_path
+    src: ./resources/[ox]/ox_doorlock-1.19.3
+    dest: ./resources/[ox]/ox_doorlock
+    overwrite: true
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
+
+  - action: download_github
+    dest: ./resources/[addon]/lc_fuel
+    ref: main
+    src: https://github.com/LeonardoSoares98/lc_fuel
+
+  - action: download_github
+    dest: ./resources/[addon]/um-idcard
+    ref: main
+    src: https://github.com/alp1x/um-idcard
+
+  - action: download_file
+    path: ./tmp/ps-adminmenu.zip
+    url: https://github.com/Project-Sloth/ps-adminmenu/archive/refs/tags/1.1.6.zip
+  - action: unzip
+    dest: ./resources/[addon]
+    src: ./tmp/ps-adminmenu.zip
+
+  - action: move_path
+    src: ./resources/[addon]/ps-adminmenu-1.1.6
+    dest: ./resources/[addon]/ps-adminmenu
+
+  - action: download_github
+    dest: ./resources/[addon]/ps-banking
+    ref: main
+    src: https://github.com/The-Orders-Storage/ps-banking
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -285,32 +235,6 @@ tasks:
     dest: ./resources/[voice]/pma-voice
     ref: main
     src: https://github.com/AvarianKnight/pma-voice
-
-  - action: download_file
-    path: ./tmp/mm_radio.zip
-    url: https://github.com/SOH69/mm_radio/releases/latest/download/mm_radio.zip
-  - action: unzip
-    dest: ./resources/[voice]
-    src: ./tmp/mm_radio.zip
-  - action: move_path
-    src: ./resources/[voice]/mm_radio/mm_radio
-    dest: ./resources/[voice]/mm_radio
-
-    # Assets
-  - action: download_github
-    dest: ./resources/[assets]/dealer_map
-    ref: main
-    src: https://github.com/qbcore-framework/dealer_map
-
-  - action: download_github
-    dest: ./resources/[assets]/[prison_map]
-    ref: main
-    src: https://github.com/qbcore-framework/prison_map
-
-  - action: download_github
-    dest: ./resources/[assets]/pillbox
-    ref: main
-    src: https://github.com/Lorenc95/pillbox
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -324,12 +248,7 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-multicharacter
     ref: main
-    src: https://github.com/qbcore-framework/qb-multicharacter
-
-  - action: move_path
-    src: ./tmp/theorder/edits/qb-multicharacter/main.lua
-    dest: ./resources/[qb]/qb-multicharacter/server/main.lua
-    overwrite: true
+    src: https://github.com/The-Orders-Storage/qb-multicharacter
 
   - action: download_github
     dest: ./resources/[qb]/qb-vehiclesales
@@ -345,7 +264,6 @@ tasks:
     dest: ./resources/[qb]/qb-houserobbery
     ref: main
     src: https://github.com/qbcore-framework/qb-houserobbery
-
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -363,13 +281,12 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-houses
     ref: main
-    src: https://github.com/qbcore-framework/qb-houses
+    src: https://github.com/The-Orders-Storage/qb-houses
 
   - action: download_github
     dest: ./resources/[qb]/qb-ambulancejob
     ref: main
     src: https://github.com/qbcore-framework/qb-ambulancejob
-
 
   - action: waste_time # prevent github throttling
     seconds: 10
@@ -387,12 +304,12 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-policejob
     ref: main
-    src: https://github.com/qbcore-framework/qb-policejob
+    src: https://github.com/The-Orders-Storage/qb-policejob
 
   - action: download_github
     dest: ./resources/[qb]/qb-apartments
     ref: main
-    src: https://github.com/qbcore-framework/qb-apartments
+    src: https://github.com/The-Orders-Storage/qb-apartments
 
   - action: download_github
     dest: ./resources/[qb]/qb-vehiclekeys
@@ -409,9 +326,6 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-phone
 
-
-
-
   - action: waste_time # prevent github throttling
     seconds: 10
 
@@ -424,11 +338,6 @@ tasks:
     dest: ./resources/[qb]/qb-towjob
     ref: main
     src: https://github.com/qbcore-framework/qb-towjob
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-storerobbery
-    ref: main
-    src: https://github.com/qbcore-framework/qb-storerobbery
 
   - action: download_github
     dest: ./resources/[qb]/qb-spawn
@@ -445,9 +354,6 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-recyclejob
 
-
-
-
   - action: waste_time # prevent github throttling
     seconds: 10
 
@@ -459,12 +365,7 @@ tasks:
   - action: download_github
     dest: ./resources/[qb]/qb-cityhall
     ref: main
-    src: https://github.com/qbcore-framework/qb-cityhall
-
-  - action: move_path
-    src: ./tmp/theorder/edits/qb-cityhall/main.lua
-    dest: ./resources/[qb]/qb-cityhall/server/main.lua
-    overwrite: true
+    src: https://github.com/The-Orders-Storage/qb-cityhall
 
   - action: download_github
     dest: ./resources/[qb]/qb-truckrobbery
@@ -491,7 +392,6 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-garages
 
-
   - action: waste_time # prevent github throttling
     seconds: 10
 
@@ -499,11 +399,6 @@ tasks:
     dest: ./resources/[qb]/qb-bankrobbery
     ref: main
     src: https://github.com/qbcore-framework/qb-bankrobbery
-
-  - action: download_github
-    dest: ./resources/[qb]/qb-banking
-    ref: main
-    src: https://github.com/qbcore-framework/qb-banking
 
   - action: download_github
     dest: ./resources/[qb]/qb-clothing
