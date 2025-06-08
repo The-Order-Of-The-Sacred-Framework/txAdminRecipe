@@ -159,7 +159,7 @@ tasks:
   # OX resources
   - action: download_file
     path: ./tmp/ox_lib.zip
-    url: https://github.com/CommunityOx/ox_lib/releases/download/v3.30.9/ox_lib.zip
+    url: https://github.com/CommunityOx/ox_lib/releases/download/latest/ox_lib.zip
   - action: unzip
     dest: ./resources/[ox]
     src: ./tmp/ox_lib.zip
