@@ -192,16 +192,11 @@ tasks:
 
   - action: download_file
     path: ./tmp/ox_doorlock.zip
-    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_doorlock/archive/refs/tags/1.19.3.zip
+    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_doorlock/releases/latest/download/ox_doorlock.zip
 
   - action: unzip
     dest: ./resources/[ox]
     src: ./tmp/ox_doorlock.zip
-
-  - action: move_path
-    src: ./resources/[ox]/ox_doorlock-1.19.3
-    dest: ./resources/[ox]/ox_doorlock
-    overwrite: true
 
   - action: waste_time # prevent github throttling
     seconds: 10
