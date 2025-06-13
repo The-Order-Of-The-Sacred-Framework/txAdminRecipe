@@ -153,15 +153,11 @@ tasks:
 
   - action: download_file
     path: ./tmp/ox_target.zip
-    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_target/archive/refs/tags/1.17.2.zip
+    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_target/releases/latest/download/ox_target.zip
 
   - action: unzip
     dest: ./resources/[ox]
     src: ./tmp/ox_target.zip
-
-  - action: move_path
-    src: ./resources/[ox]/ox_target-1.17.2
-    dest: ./resources/[ox]/ox_target
 
   - action: download_file
     path: ./tmp/oxmysql.zip
