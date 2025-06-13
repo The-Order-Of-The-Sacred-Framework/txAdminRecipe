@@ -69,7 +69,7 @@ tasks:
   - action: download_github
     dest: ./resources/[standalone]/bob74_ipl
     ref: master
-    src: https://github.com/qbcore-framework/bob74_ipl
+    src: https://github.com/Bob74/bob74_ipl
 
   - action: download_github
     dest: ./resources/[standalone]/screenshot-basic
@@ -116,8 +116,17 @@ tasks:
     path: ./resources/[standalone]/MugShotBase64/LICENSE.md
 
   - action: download_file
+    path: ./tmp/menuv.zip
+    url: https://github.com/ThymonA/menuv/releases/download/v1.4.1/menuv_v1.4.1.zip
+
+  - action: unzip
+    dest: ./resources/[standalone]/menuv
+    src: ./tmp/menuv.zip
+
+  - action: download_file
     path: ./tmp/Renewed-Weathersync.zip
     url: https://github.com/Renewed-Scripts/Renewed-Weathersync/releases/latest/download/Renewed-Weathersync.zip
+
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/Renewed-Weathersync.zip
@@ -125,9 +134,11 @@ tasks:
   - action: download_file
     path: ./tmp/loadscreen.zip
     url: https://github.com/D4isDAVID/loadscreen/releases/latest/download/loadscreen.zip
+
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/loadscreen.zip
+
   - action: copy_path
     src: ./myLogo.png
     dest: ./resources/[standalone]/loadscreen/html/assets/logo.png
@@ -160,7 +171,8 @@ tasks:
   # OX resources
   - action: download_file
     path: ./tmp/ox_lib.zip
-    url: https://github.com/overextended/ox_lib/releases/latest/download/ox_lib.zip
+    url: https://github.com/CommunityOx/ox_lib/releases/latest/download/ox_lib.zip
+
   - action: unzip
     dest: ./resources/[ox]
     src: ./tmp/ox_lib.zip
@@ -179,7 +191,8 @@ tasks:
 
   - action: download_file
     path: ./tmp/oxmysql.zip
-    url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
+    url: https://github.com/CommunityOx/oxmysql/releases/latest/download/oxmysql.zip
+
   - action: unzip
     dest: ./resources/[ox]
     src: ./tmp/oxmysql.zip
@@ -258,9 +271,6 @@ tasks:
     dest: ./resources/[ox]/ox_inventory/web/images/customizableplate.png
     overwrite: true
 
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
   - action: download_github
     dest: ./resources/[addon]/r_communityservice
     ref: main
@@ -274,6 +284,7 @@ tasks:
   - action: download_file
     path: ./tmp/xt-prison.zip
     url: https://github.com/xT-Development/xt-prison/releases/latest/download/xt-prison.zip
+
   - action: unzip
     dest: ./resources/[addon]
     src: ./tmp/xt-prison.zip
@@ -301,7 +312,7 @@ tasks:
   - action: download_github
     dest: ./resources/[addon]/lc_fuel
     ref: main
-    src: https://github.com/LeonardoSoares98/lc_fuel
+    src: https://github.com/LeonardoSoares98/lc_fuel/releases/latest/download/lc_fuel.zip
 
   - action: download_github
     dest: ./resources/[addon]/um-idcard
@@ -317,18 +328,6 @@ tasks:
     dest: ./resources/[addon]/ps-dispatch
     ref: main
     src: https://github.com/Project-Sloth/ps-dispatch
-
-  - action: download_file
-    path: ./tmp/ps-adminmenu.zip
-    url: https://github.com/Project-Sloth/ps-adminmenu/archive/refs/tags/1.1.6.zip
-
-  - action: unzip
-    dest: ./resources/[addon]
-    src: ./tmp/ps-adminmenu.zip
-
-  - action: move_path
-    src: ./resources/[addon]/ps-adminmenu-1.1.6
-    dest: ./resources/[addon]/ps-adminmenu
 
   - action: download_github
     dest: ./resources/[addon]/sleepless_inventory_addons
@@ -466,6 +465,11 @@ tasks:
     src: https://github.com/qbcore-framework/qb-hud
 
   - action: download_github
+    dest: ./resources/[qb]/qb-adminmenu
+    ref: main
+    src: https://github.com/qbcore-framework/qb-adminmenu
+
+  - action: download_github
     dest: ./resources/[qb]/qb-management
     ref: main
     src: https://github.com/qbcore-framework/qb-management
@@ -515,9 +519,6 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-phone
 
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
   - action: download_github
     dest: ./resources/[qb]/qb-scrapyard
     ref: main
@@ -542,9 +543,6 @@ tasks:
     dest: ./resources/[qb]/qb-recyclejob
     ref: main
     src: https://github.com/qbcore-framework/qb-recyclejob
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-diving
@@ -617,9 +615,6 @@ tasks:
     dest: ./resources/[qb]/qb-menu
     ref: main
     src: https://github.com/qbcore-framework/qb-menu
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-input

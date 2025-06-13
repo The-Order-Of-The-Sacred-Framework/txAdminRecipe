@@ -102,8 +102,17 @@ tasks:
     path: ./resources/[standalone]/MugShotBase64/LICENSE.md
 
   - action: download_file
+    path: ./tmp/menuv.zip
+    url: https://github.com/ThymonA/menuv/releases/download/v1.4.1/menuv_v1.4.1.zip
+
+  - action: unzip
+    dest: ./resources/[standalone]/menuv
+    src: ./tmp/menuv.zip
+
+  - action: download_file
     path: ./tmp/Renewed-Weathersync.zip
     url: https://github.com/Renewed-Scripts/Renewed-Weathersync/releases/latest/download/Renewed-Weathersync.zip
+
   - action: unzip
     dest: ./resources/[standalone]
     src: ./tmp/Renewed-Weathersync.zip
@@ -133,13 +142,11 @@ tasks:
     ref: main
     src: https://github.com/LeonardoSoares98/lc_utils/
 
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
   # OX resources
   - action: download_file
     path: ./tmp/ox_lib.zip
-    url: https://github.com/overextended/ox_lib/releases/latest/download/ox_lib.zip
+    url: https://github.com/CommunityOx/ox_lib/releases/latest/download/ox_lib.zip
+
   - action: unzip
     dest: ./resources/[ox]
     src: ./tmp/ox_lib.zip
@@ -158,7 +165,8 @@ tasks:
 
   - action: download_file
     path: ./tmp/oxmysql.zip
-    url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
+    url: https://github.com/CommunityOx/ox_lib/releases/latest/download/ox_lib.zip
+
   - action: unzip
     dest: ./resources/[ox]
     src: ./tmp/oxmysql.zip
@@ -205,40 +213,23 @@ tasks:
   - action: download_github
     dest: ./resources/[addon]/lc_fuel
     ref: main
-    src: https://github.com/LeonardoSoares98/lc_fuel
+    src: https://github.com/LeonardoSoares98/lc_fuel/releases/latest/download/lc_fuel.zip
 
   - action: download_github
     dest: ./resources/[addon]/um-idcard
     ref: main
     src: https://github.com/alp1x/um-idcard
 
-  - action: download_file
-    path: ./tmp/ps-adminmenu.zip
-    url: https://github.com/Project-Sloth/ps-adminmenu/archive/refs/tags/1.1.6.zip
-  - action: unzip
-    dest: ./resources/[addon]
-    src: ./tmp/ps-adminmenu.zip
-
-  - action: move_path
-    src: ./resources/[addon]/ps-adminmenu-1.1.6
-    dest: ./resources/[addon]/ps-adminmenu
-
   - action: download_github
     dest: ./resources/[addon]/ps-banking
     ref: main
     src: https://github.com/The-Orders-Storage/ps-banking
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
 
     # VOICE
   - action: download_github
     dest: ./resources/[voice]/pma-voice
     ref: main
     src: https://github.com/AvarianKnight/pma-voice
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
 
   # Downloading QBCore resources
   - action: download_github
@@ -266,10 +257,6 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-houserobbery
 
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
   - action: download_github
     dest: ./resources/[qb]/qb-hud
     ref: main
@@ -279,6 +266,11 @@ tasks:
     dest: ./resources/[qb]/qb-management
     ref: main
     src: https://github.com/qbcore-framework/qb-management
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-adminmenu
+    ref: main
+    src: https://github.com/qbcore-framework/qb-adminmenu
 
   - action: download_github
     dest: ./resources/[qb]/qb-houses
@@ -328,9 +320,6 @@ tasks:
     dest: ./resources/[qb]/qb-phone
     ref: main
     src: https://github.com/qbcore-framework/qb-phone
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-scrapyard
@@ -428,9 +417,6 @@ tasks:
     dest: ./resources/[qb]/qb-menu
     ref: main
     src: https://github.com/qbcore-framework/qb-menu
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-input
