@@ -294,4 +294,4 @@ CREATE TABLE IF NOT EXISTS `inventories` (
   KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4;
 
-ALTER TABLE `players` ADD `crafting_blueprints` LONGTEXT NOT NULL DEFAULT '[]';
+ALTER TABLE `players` ADD `crafting_blueprints` LONGTEXT NOT NULL DEFAULT ('[]');
