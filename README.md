@@ -28,7 +28,7 @@ This isn’t just a base QBCore recipe — it’s an enhanced and opinionated st
 * **sleepless\_inventory\_addons** — supports visual items on player models like weapons on backs
 * **lation\_247robbery** — a modern, streamlined alternative to the legacy 24/7 robbery system
 * **mm\_radio** — replaces `qb-radio` with a cleaner, modern interface
-* **rpemotes-compatible shops** — player shops include emote interactions for added immersion
+* **rpemotes** — emote interactions for added immersion
 * **Community Bridge** — a shared utility layer powering community-built resources to simplify scripting and reduce duplication
 * **Standard QBCore Resources** — all other core QBCore files are pulled directly from the official QBCore GitHub repositories for stability and ease of future updates
 
