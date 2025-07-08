@@ -144,9 +144,6 @@ tasks:
     dest: ./resources/[standalone]/loadscreen/html/assets/logo.png
     overwrite: true
 
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
     # Libs
   - action: download_github
     dest: ./resources/[libs]/community_bridge
@@ -446,10 +443,6 @@ tasks:
     ref: main
     src: https://github.com/qbcore-framework/qb-houserobbery
 
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
-
   - action: download_github
     dest: ./resources/[qb]/qb-hud
     ref: main
@@ -504,6 +497,9 @@ tasks:
     dest: ./resources/[qb]/qb-mechanicjob
     ref: main
     src: https://github.com/qbcore-framework/qb-mechanicjob
+
+  - action: waste_time # prevent github throttling
+    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-phone
@@ -569,10 +565,6 @@ tasks:
     dest: ./resources/[qb]/qb-garages
     ref: main
     src: https://github.com/qbcore-framework/qb-garages
-
-
-  - action: waste_time # prevent github throttling
-    seconds: 10
 
   - action: download_github
     dest: ./resources/[qb]/qb-bankrobbery
