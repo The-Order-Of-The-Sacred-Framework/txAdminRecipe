@@ -348,16 +348,6 @@ tasks:
     overwrite: true
 
   - action: download_github
-    dest: ./resources/[addon]/md-houserobberies
-    ref: main
-    src: https://github.com/Mustachedom/md-houserobberies
-
-  - action: copy_path
-    src: ./resources/[addon]/md-houserobberies/install/images
-    dest: ./resources/[ox]/ox_inventory/web/images
-    overwrite: true
-
-  - action: download_github
     dest: ./resources/[addon]/md-drugs
     ref: main
     src: https://github.com/Mustachedom/md-drugs
