@@ -1,4 +1,4 @@
-# 🧪 txAdminRecipe – The Order of the Sacred Framework Edition
+# 🧪 txAdminRecipe – The Order of the Sacred Framework
 
 **Description:**
 A refined and production-ready **QBCore-based txAdmin recipe** built by *The Order of the Sacred Framework*, designed to give your server a solid, modern foundation with minimal setup.
