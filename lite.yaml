@@ -9,7 +9,7 @@ tasks:
 
   #  Download Base Files
   - action: download_github
-    src: https://github.com/The-Order-Of-The-Sacred-Framework/txAdminRecipe
+    src: https://github.com/TheOrderFivem/txAdminRecipe
     ref: main
     dest: ./tmp/theorder
 
@@ -135,7 +135,7 @@ tasks:
   - action: download_github
     dest: ./resources/[libs]/community_bridge
     ref: main
-    src: https://github.com/The-Order-Of-The-Sacred-Framework/community_bridge/
+    src: https://github.com/TheOrderFivem/community_bridge/
 
   - action: download_github
     dest: ./resources/[libs]/lc_utils
@@ -153,7 +153,7 @@ tasks:
 
   - action: download_file
     path: ./tmp/ox_target.zip
-    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_target/releases/latest/download/ox_target.zip
+    url: https://github.com/TheOrderFivem/ox_target/releases/latest/download/ox_target.zip
 
   - action: unzip
     dest: ./resources/[ox]
@@ -169,7 +169,7 @@ tasks:
 
   - action: download_file
     path: ./tmp/ox_inventory.zip
-    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_inventory/releases/latest/download/ox_inventory.zip
+    url: https://github.com/TheOrderFivem/ox_inventory/releases/latest/download/ox_inventory.zip
 
   - action: unzip
     dest: ./resources/[ox]
@@ -192,7 +192,7 @@ tasks:
 
   - action: download_file
     path: ./tmp/ox_doorlock.zip
-    url: https://github.com/The-Order-Of-The-Sacred-Framework/ox_doorlock/releases/latest/download/ox_doorlock.zip
+    url: https://github.com/TheOrderFivem/ox_doorlock/releases/latest/download/ox_doorlock.zip
 
   - action: unzip
     dest: ./resources/[ox]
