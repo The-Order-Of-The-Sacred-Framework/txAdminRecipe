@@ -270,14 +270,6 @@ tasks:
     src: https://github.com/Coffeelot/cw-crafting/releases/latest/download/cw-crafting.zip
 
   - action: download_file
-    path: ./tmp/xt-prison.zip
-    url: https://github.com/xT-Development/xt-prison/releases/latest/download/xt-prison.zip
-
-  - action: unzip
-    dest: ./resources/[addon]
-    src: ./tmp/xt-prison.zip
-
-  - action: download_file
     path: ./tmp/bl_customs.zip
     url: https://github.com/Byte-Labs-Studio/bl_customs/releases/latest/download/bl_customs.zip
 
@@ -510,6 +502,11 @@ tasks:
     dest: ./resources/[qb]/qb-smallresources
     ref: main
     src: https://github.com/qbcore-framework/qb-smallresources
+
+  - action: download_github
+    dest: ./resources/[qb]/qb-prison
+    ref: main
+    src: https://github.com/qbcore-framework/qb-prison
 
   - action: download_github
     dest: ./resources/[qb]/qb-recyclejob
